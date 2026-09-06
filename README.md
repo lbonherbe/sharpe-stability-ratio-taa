@@ -19,6 +19,7 @@ The paper applies the Sharpe Stability Ratio (SSR) of Bajo Traver and Rodriguez 
 | `results/rolling_haa-standard.json`, `results/rolling_sp500.json` | The two rolling Sharpe paths behind Figure 3. |
 | `results/run.log` | The study's console output. |
 | `results/production-agreement-check.txt` | Output of the agreement check (217 of 219 active variants agree to 15 decimals; the other two are below the production gate). |
+| `code/ssr_catalog.py`, `results/RESULTS-ancillary-2026-09-05.md` | The ancillary prototype and its output: the autocorrelation-adjusted Deflated Sharpe check (paper Section 2.1), the Deflated Sharpe benchmark (Section 3.3) and the reproduction of the published Deflated Sharpe Ratios (Section 4.4). Run on the extract including the partial September month; needs the private backend for the expected-maximum benchmark. |
 | `charts/` | The six figures as rendered in the paper. |
 
 ## Definition (identifier `ssr-36m-nw-v1`)
