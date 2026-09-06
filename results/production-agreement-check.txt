@@ -1,0 +1,4 @@
+compared 217 variants; max |diff| = 4.44e-16 (variant 242: codex 1.191375 vs proto 1.191375); median |diff| = 0.00e+00; None where proto had a value: [48, 56]
+fixture w=36 n=200: codex 0.3070538560693961 vs ref 0.30705386
+fixture w=12 n=200: codex 0.2666770010429096 vs ref 0.26667700
+fixture w=36 n=60: codex None vs ref 5.81157737
