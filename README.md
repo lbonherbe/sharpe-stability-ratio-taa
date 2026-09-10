@@ -1,6 +1,6 @@
 # Replication package: The Sharpe Stability Ratio in Tactical and Static Asset Allocation Backtests
 
-Laurent Bonherbe, BestFolio Research. Working paper, version 0.3, 6 September 2026. SSRN link: to be added once the abstract page is live.
+Laurent Bonherbe, BestFolio Research. Working paper, version 0.4, 10 September 2026. SSRN link: to be added once the abstract page is live.
 
 The paper applies the Sharpe Stability Ratio (SSR) of Bajo Traver and Rodriguez Dominguez (2026, SSRN 6344658) to 173 published strategy variants of the BestFolio catalog. This repository holds the code that produced every number, table and figure in the paper, the outputs it produced, and the supplementary tables. It does not hold the raw month-end series (see "What is not here").
 
