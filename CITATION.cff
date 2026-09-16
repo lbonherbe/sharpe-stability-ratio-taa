@@ -10,3 +10,16 @@ version: "0.4"
 date-released: "2026-09-10"
 url: "https://github.com/lbonherbe/sharpe-stability-ratio-taa"
 type: software
+preferred-citation:
+  type: article
+  title: "The Sharpe Stability Ratio in Tactical and Static Asset Allocation Backtests: Evidence from 173 Published Strategy Variants"
+  authors:
+    - family-names: Bonherbe
+      given-names: Laurent
+      affiliation: BestFolio Research
+      orcid: "https://orcid.org/0009-0007-9586-8601"
+  year: 2026
+  month: 9
+  doi: "10.2139/ssrn.7441662"
+  url: "https://ssrn.com/abstract=7441662"
+  notes: "SSRN working paper, posted 16 September 2026."
