@@ -1,6 +1,6 @@
 """SSR study v2 (2026-09-06): the referee-driven regeneration.
 
-Changes versus ssr_paper_study.py, all in response to the adversarial review (paper/codex-review-v0.2.md):
+Changes versus ssr_paper_study.py, all in response to an adversarial review of draft v0.2:
 - completed months only: returns dated after CUTOFF (2026-08-31) are dropped (the extract ended 3/4 Sep 2026);
 - three variants of one strategy whose macroeconomic input uses revised rather than point-in-time data are
   excluded from the PRIMARY sample (EXCLUDED_STRATEGIES); their effect is reported as a sensitivity;

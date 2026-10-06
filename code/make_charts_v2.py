@@ -93,7 +93,10 @@ ax.set_xscale("log"); ax.set_xlabel("annual turnover (log scale)"); ax.set_ylabe
 rt = res["spearman_full"]["turnover"]["rho"]
 for t in res["turnover_terciles"]:
     lo, hi = t["range"]; ax.hlines(t["median_ssr"], max(lo, 0.01), hi, color=P2, lw=2.5); ax.text(math.sqrt(max(lo, 0.01) * hi), t["median_ssr"] + 0.02, f"median {t['median_ssr']:.2f}", color=P2, fontsize=8, ha="center")
-ax.set_title(f"SSR and reported annual turnover: rank correlation {rt:.2f}; tercile medians marked; one zero-turnover variant omitted by the log axis", fontsize=10); ck.style(ax)
+# the omitted count is read from the data (it was a fixed "one" until the 2026-09-28 restatement left none at zero)
+n_zero = int((np.isfinite(x) & np.isfinite(y) & (x <= 0)).sum())
+omit = "" if n_zero == 0 else f"; {n_zero} zero-turnover variant{'s' if n_zero > 1 else ''} omitted by the log axis"
+ax.set_title(f"SSR and reported annual turnover: rank correlation {rt:.2f}; tercile medians marked{omit}", fontsize=10); ck.style(ax)
 save(fig, "fig5_ssr_vs_turnover")
 
 # Figure 6: bootstrap intervals for the top and bottom 12

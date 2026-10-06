@@ -1,5 +1,5 @@
 {
- "note": "Reference values from an independent stdlib implementation (Claude, 2026-09-05). Rolling per-period Sharpe = mean/sd(ddof=1), rf=0; long-run variance = gamma0 + 2*sum_{k=1..L}(1-k/(L+1))*gamma_k with gamma_k = (1/n)*sum_{t>k}(z_t-mean)(z_{t-k}-mean); L = w-1. SSR(0) = mean(z)/sqrt(var); nSSR = sqrt(n_windows)*SSR. The 60-return diagnostic case was corrected using a separate stdlib calculation: L is clamped to n_windows-1 per the definition, so its effective bandwidth is 24, not 35. The original fixture used unclamped Bartlett weights in that case.",
+ "note": "Reference values from an independent implementation using only the Python standard library (2026-09-05). Rolling per-period Sharpe = mean/sd(ddof=1), rf=0; long-run variance = gamma0 + 2*sum_{k=1..L}(1-k/(L+1))*gamma_k with gamma_k = (1/n)*sum_{t>k}(z_t-mean)(z_{t-k}-mean); L = w-1. SSR(0) = mean(z)/sqrt(var); nSSR = sqrt(n_windows)*SSR. The 60-return diagnostic case was corrected using a separate stdlib calculation: L is clamped to n_windows-1 per the definition, so its effective bandwidth is 24, not 35. The original fixture used unclamped Bartlett weights in that case.",
  "monthly_returns": [
   -0.03276671,
   -0.00997002,

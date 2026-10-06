@@ -6,8 +6,8 @@ authors:
     given-names: Laurent
     affiliation: BestFolio Research
     orcid: "https://orcid.org/0009-0007-9586-8601"
-version: "0.4"
-date-released: "2026-09-10"
+version: "0.5"
+date-released: "2026-09-28"
 url: "https://github.com/lbonherbe/sharpe-stability-ratio-taa"
 type: software
 preferred-citation:

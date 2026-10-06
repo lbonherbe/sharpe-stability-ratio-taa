@@ -30,11 +30,11 @@ for vid, nav in navs.items():
         if ssr is None: nones.append(vid); continue
         diffs.append((abs(ssr - proto[vid]), vid, ssr, proto[vid]))
 diffs.sort(reverse=True)
-print(f"compared {len(diffs)} variants; max |diff| = {diffs[0][0]:.2e} (variant {diffs[0][1]}: codex {diffs[0][2]:.6f} vs proto {diffs[0][3]:.6f}); median |diff| = {st.median(d[0] for d in diffs):.2e}; None where proto had a value: {nones}")
+print(f"compared {len(diffs)} variants; max |diff| = {diffs[0][0]:.2e} (variant {diffs[0][1]}: production {diffs[0][2]:.6f} vs proto {diffs[0][3]:.6f}); median |diff| = {st.median(d[0] for d in diffs):.2e}; None where proto had a value: {nones}")
 # fixture check
 fx = json.load(open(f"{SP}/ssr_reference.json"))
 for c in fx["cases"]:
     n = 200 if c["n_windows"] > 100 else 60
     res = fn(np.asarray(fx["monthly_returns"][:n], dtype=float), window=c["window"]) if "window" in fn.__code__.co_varnames else None
     if res is not None:
-        print(f"fixture w={c['window']} n={n}: codex {getattr(res,'ssr',None)} vs ref {c['ssr']:.8f}")
+        print(f"fixture w={c['window']} n={n}: production {getattr(res,'ssr',None)} vs ref {c['ssr']:.8f}")
