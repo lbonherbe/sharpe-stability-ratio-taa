@@ -1,237 +1,269 @@
 {
  "top_bottom": [
   {
+   "rank": 1,
+   "id": 10,
    "name": "momentum-correlation-triplet/mom-corr-triplet-standard",
    "start": "1987",
-   "sharpe": "1.25",
+   "sharpe": "1.21",
    "dsr": "1.000",
-   "ssr": "0.91",
-   "ssr4": "0.9058",
+   "ssr": "0.94",
+   "ssr4": "0.9356",
    "pct": [
-    "0.44",
-    "1.10"
+    "0.43",
+    "1.02"
    ],
-   "turnover": "3.9",
+   "turnover": "4.0",
    "stype": "taa",
    "freq": "monthly"
   },
   {
-   "name": "momentum-correlation-triplet/mom-corr-triplet-smartleverage-1.5x",
-   "start": "1987",
-   "sharpe": "1.10",
-   "dsr": "0.999",
-   "ssr": "0.89",
-   "ssr4": "0.8900",
-   "pct": [
-    "0.41",
-    "1.02"
-   ],
-   "turnover": "4.8",
-   "stype": "taa",
-   "freq": "monthly"
-  },
-  {
-   "name": "low-initiative-letf-v2/low-initiative-letf-v2-standard",
-   "start": "2002",
-   "sharpe": "0.82",
-   "dsr": "0.904",
-   "ssr": "0.87",
-   "ssr4": "0.8693",
-   "pct": [
-    "0.32",
-    "1.02"
-   ],
-   "turnover": "14.6",
-   "stype": "taa",
-   "freq": "daily"
-  },
-  {
-   "name": "alphaone-momentum/alphaone-momentum-standard",
-   "start": "1993",
-   "sharpe": "0.92",
-   "dsr": "0.986",
-   "ssr": "0.81",
-   "ssr4": "0.8105",
-   "pct": [
-    "0.42",
-    "1.05"
-   ],
-   "turnover": "14.0",
-   "stype": "taa",
-   "freq": "weekly"
-  },
-  {
+   "rank": 2,
+   "id": 144,
    "name": "momentum-correlation-triplet/mom-corr-triplet-plus",
-   "start": "1986",
-   "sharpe": "1.23",
-   "dsr": "1.000",
-   "ssr": "0.80",
-   "ssr4": "0.8031",
-   "pct": [
-    "0.40",
-    "1.09"
-   ],
-   "turnover": "4.8",
-   "stype": "taa",
-   "freq": "monthly"
-  },
-  {
-   "name": "rvol-shifter/rvol-shifter-cash-only",
-   "start": "2003",
-   "sharpe": "0.85",
-   "dsr": "0.926",
-   "ssr": "0.75",
-   "ssr4": "0.7452",
-   "pct": [
-    "0.35",
-    "1.28"
-   ],
-   "turnover": "9.7",
-   "stype": "taa",
-   "freq": "daily"
-  },
-  {
-   "name": "dms-triad/dms-triad",
    "start": "1985",
    "sharpe": "1.25",
    "dsr": "1.000",
-   "ssr": "0.68",
-   "ssr4": "0.6824",
+   "ssr": "0.86",
+   "ssr4": "0.8619",
    "pct": [
-    "0.40",
-    "0.90"
+    "0.41",
+    "1.05"
+   ],
+   "turnover": "4.8",
+   "stype": "taa",
+   "freq": "monthly"
+  },
+  {
+   "rank": 3,
+   "id": 240,
+   "name": "momentum-correlation-triplet/mom-corr-triplet-smartleverage-1.5x",
+   "start": "1987",
+   "sharpe": "1.07",
+   "dsr": "0.998",
+   "ssr": "0.86",
+   "ssr4": "0.8552",
+   "pct": [
+    "0.38",
+    "0.95"
+   ],
+   "turnover": "4.9",
+   "stype": "taa",
+   "freq": "monthly"
+  },
+  {
+   "rank": 4,
+   "id": 177,
+   "name": "low-initiative-letf-v2/low-initiative-letf-v2-standard",
+   "start": "2002",
+   "sharpe": "0.82",
+   "dsr": "0.860",
+   "ssr": "0.77",
+   "ssr4": "0.7742",
+   "pct": [
+    "0.30",
+    "0.96"
+   ],
+   "turnover": "15.4",
+   "stype": "taa",
+   "freq": "daily"
+  },
+  {
+   "rank": 5,
+   "id": 75,
+   "name": "pragmatic-aa/pragmatic-aa-standard",
+   "start": "1985",
+   "sharpe": "1.18",
+   "dsr": "1.000",
+   "ssr": "0.73",
+   "ssr4": "0.7300",
+   "pct": [
+    "0.39",
+    "0.94"
+   ],
+   "turnover": "2.6",
+   "stype": "taa",
+   "freq": "monthly"
+  },
+  {
+   "rank": 6,
+   "id": 34,
+   "name": "dms-triad/dms-triad-plus",
+   "start": "1985",
+   "sharpe": "1.17",
+   "dsr": "1.000",
+   "ssr": "0.72",
+   "ssr4": "0.7222",
+   "pct": [
+    "0.38",
+    "0.86"
    ],
    "turnover": "3.1",
    "stype": "taa",
    "freq": "monthly"
   },
   {
-   "name": "pragmatic-aa/pragmatic-aa-standard",
-   "start": "1986",
-   "sharpe": "1.13",
+   "rank": 7,
+   "id": 33,
+   "name": "dms-triad/dms-triad",
+   "start": "1985",
+   "sharpe": "1.24",
    "dsr": "1.000",
-   "ssr": "0.68",
-   "ssr4": "0.6775",
+   "ssr": "0.70",
+   "ssr4": "0.6959",
    "pct": [
-    "0.38",
-    "0.93"
+    "0.40",
+    "0.89"
    ],
-   "turnover": "2.5",
+   "turnover": "3.1",
    "stype": "taa",
    "freq": "monthly"
   },
   {
-   "name": "kiss-momentum/kiss-combined-70-30",
-   "start": "1986",
-   "sharpe": "1.20",
+   "rank": 8,
+   "id": 138,
+   "name": "vitral-multi-asset-momentum/vitral-mam-ensemble",
+   "start": "1985",
+   "sharpe": "1.14",
    "dsr": "0.999",
-   "ssr": "0.66",
-   "ssr4": "0.6618",
+   "ssr": "0.67",
+   "ssr4": "0.6712",
    "pct": [
-    "0.37",
-    "1.06"
+    "0.35",
+    "0.82"
    ],
    "turnover": "2.7",
    "stype": "taa",
    "freq": "monthly"
   },
   {
-   "name": "dms-triad/dms-triad-plus",
-   "start": "1985",
-   "sharpe": "1.18",
-   "dsr": "1.000",
-   "ssr": "0.66",
-   "ssr4": "0.6604",
-   "pct": [
-    "0.37",
-    "0.88"
-   ],
-   "turnover": "3.2",
-   "stype": "taa",
-   "freq": "monthly"
-  },
-  {
-   "name": "dms-gpmv/dms-gpmv",
-   "start": "1988",
-   "sharpe": "1.25",
-   "dsr": "1.000",
-   "ssr": "0.66",
-   "ssr4": "0.6557",
-   "pct": [
-    "0.39",
-    "1.15"
-   ],
-   "turnover": "4.5",
-   "stype": "taa",
-   "freq": "monthly"
-  },
-  {
+   "rank": 9,
+   "id": 234,
    "name": "tqqq-quadrant-stack/tqqq-quadrant-stack-buffered",
    "start": "1996",
-   "sharpe": "0.90",
-   "dsr": "0.971",
-   "ssr": "0.66",
-   "ssr4": "0.6555",
+   "sharpe": "0.96",
+   "dsr": "0.979",
+   "ssr": "0.67",
+   "ssr4": "0.6707",
    "pct": [
-    "0.26",
-    "0.96"
+    "0.28",
+    "1.05"
    ],
    "turnover": "0.9",
    "stype": "taa",
    "freq": "monthly"
   },
   {
+   "rank": 10,
+   "id": 137,
+   "name": "vitral-multi-asset-momentum/vitral-mam-low-protection",
+   "start": "1985",
+   "sharpe": "1.29",
+   "dsr": "1.000",
+   "ssr": "0.66",
+   "ssr4": "0.6605",
+   "pct": [
+    "0.37",
+    "0.96"
+   ],
+   "turnover": "3.9",
+   "stype": "taa",
+   "freq": "monthly"
+  },
+  {
+   "rank": 11,
+   "id": 35,
+   "name": "dms-triad/dms-triad-plus-plus",
+   "start": "1985",
+   "sharpe": "1.09",
+   "dsr": "0.999",
+   "ssr": "0.66",
+   "ssr4": "0.6585",
+   "pct": [
+    "0.35",
+    "0.82"
+   ],
+   "turnover": "3.1",
+   "stype": "taa",
+   "freq": "monthly"
+  },
+  {
+   "rank": 12,
+   "id": 140,
+   "name": "kiss-momentum/kiss-combined-70-30",
+   "start": "1985",
+   "sharpe": "1.24",
+   "dsr": "0.999",
+   "ssr": "0.65",
+   "ssr4": "0.6546",
+   "pct": [
+    "0.38",
+    "0.99"
+   ],
+   "turnover": "2.6",
+   "stype": "taa",
+   "freq": "monthly"
+  },
+  {
+   "rank": 161,
+   "id": 106,
    "name": "simple-path-wealth/simple-path-100",
-   "start": "1988",
-   "sharpe": "0.81",
-   "dsr": "0.926",
-   "ssr": "0.29",
-   "ssr4": "0.2916",
+   "start": "1985",
+   "sharpe": "0.80",
+   "dsr": "0.898",
+   "ssr": "0.30",
+   "ssr4": "0.2990",
    "pct": [
-    "0.14",
-    "0.62"
+    "0.16",
+    "0.59"
    ],
    "turnover": "0.0",
    "stype": "static",
    "freq": "annual"
   },
   {
-   "name": "us-market-benchmark/us-market-100",
-   "start": "1988",
-   "sharpe": "0.81",
-   "dsr": "0.926",
-   "ssr": "0.29",
-   "ssr4": "0.2916",
-   "pct": [
-    "0.15",
-    "0.62"
-   ],
-   "turnover": "0.0",
-   "stype": "static",
-   "freq": "annual"
-  },
-  {
+   "rank": 162,
+   "id": 110,
    "name": "global-market-benchmark/global-market-60-40",
-   "start": "1988",
-   "sharpe": "0.72",
-   "dsr": "0.827",
-   "ssr": "0.29",
-   "ssr4": "0.2854",
+   "start": "1985",
+   "sharpe": "0.76",
+   "dsr": "0.851",
+   "ssr": "0.30",
+   "ssr4": "0.2956",
    "pct": [
     "0.13",
-    "0.53"
+    "0.50"
    ],
    "turnover": "0.0",
    "stype": "static",
    "freq": "annual"
   },
   {
+   "rank": 163,
+   "id": 190,
+   "name": "sma-trend/sma-trend-vnq",
+   "start": "1990",
+   "sharpe": "0.63",
+   "dsr": "0.576",
+   "ssr": "0.30",
+   "ssr4": "0.2955",
+   "pct": [
+    "0.15",
+    "0.52"
+   ],
+   "turnover": "1.8",
+   "stype": "taa",
+   "freq": "monthly"
+  },
+  {
+   "rank": 164,
+   "id": 200,
    "name": "letf-upro-zroz-gld/letf-upro-zroz-gld-base",
-   "start": "1986",
-   "sharpe": "0.71",
-   "dsr": "0.819",
-   "ssr": "0.28",
-   "ssr4": "0.2837",
+   "start": "1985",
+   "sharpe": "0.76",
+   "dsr": "0.856",
+   "ssr": "0.29",
+   "ssr4": "0.2887",
    "pct": [
     "0.14",
     "0.58"
@@ -241,14 +273,16 @@
    "freq": "quarterly"
   },
   {
+   "rank": 165,
+   "id": 60,
    "name": "paired-switching/paired-switching-spy-tlt",
    "start": "1920",
    "sharpe": "0.72",
-   "dsr": "0.946",
+   "dsr": "0.908",
    "ssr": "0.28",
-   "ssr4": "0.2757",
+   "ssr4": "0.2756",
    "pct": [
-    "0.17",
+    "0.18",
     "0.37"
    ],
    "turnover": "2.9",
@@ -256,42 +290,48 @@
    "freq": "monthly"
   },
   {
+   "rank": 166,
+   "id": 109,
+   "name": "us-market-benchmark/us-market-100",
+   "start": "1900",
+   "sharpe": "0.63",
+   "dsr": "0.694",
+   "ssr": "0.27",
+   "ssr4": "0.2678",
+   "pct": [
+    "0.18",
+    "0.34"
+   ],
+   "turnover": "0.0",
+   "stype": "static",
+   "freq": "annual"
+  },
+  {
+   "rank": 167,
+   "id": 28,
    "name": "uis/uis-standard",
    "start": "1920",
    "sharpe": "0.72",
-   "dsr": "0.940",
+   "dsr": "0.897",
    "ssr": "0.24",
-   "ssr4": "0.2413",
+   "ssr4": "0.2412",
    "pct": [
-    "0.19",
-    "0.37"
+    "0.18",
+    "0.36"
    ],
    "turnover": "2.1",
    "stype": "taa",
    "freq": "monthly"
   },
   {
-   "name": "gold-cross-asset/gold-cross-asset-base",
-   "start": "1986",
-   "sharpe": "0.69",
-   "dsr": "0.794",
-   "ssr": "0.22",
-   "ssr4": "0.2237",
-   "pct": [
-    "0.10",
-    "0.50"
-   ],
-   "turnover": "1.6",
-   "stype": "taa",
-   "freq": "monthly"
-  },
-  {
+   "rank": 168,
+   "id": 125,
    "name": "regime-detector/regime-detector-standard",
    "start": "1990",
    "sharpe": "0.67",
-   "dsr": "0.744",
+   "dsr": "0.683",
    "ssr": "0.22",
-   "ssr4": "0.2164",
+   "ssr4": "0.2163",
    "pct": [
     "0.08",
     "0.49"
@@ -301,77 +341,87 @@
    "freq": "daily"
   },
   {
+   "rank": 169,
+   "id": 124,
    "name": "vix-shield/vix-shield-leveraged",
    "start": "1990",
-   "sharpe": "0.65",
-   "dsr": "0.731",
-   "ssr": "0.21",
-   "ssr4": "0.2058",
+   "sharpe": "0.64",
+   "dsr": "0.634",
+   "ssr": "0.20",
+   "ssr4": "0.2031",
    "pct": [
-    "0.08",
-    "0.68"
+    "0.06",
+    "0.64"
    ],
    "turnover": "4.7",
    "stype": "taa",
    "freq": "daily"
   },
   {
+   "rank": 170,
+   "id": 126,
    "name": "regime-detector/regime-detector-smartleverage",
    "start": "1990",
-   "sharpe": "0.61",
-   "dsr": "0.637",
+   "sharpe": "0.62",
+   "dsr": "0.580",
    "ssr": "0.20",
-   "ssr4": "0.1989",
+   "ssr4": "0.2019",
    "pct": [
-    "0.05",
-    "0.47"
+    "0.06",
+    "0.48"
    ],
    "turnover": "2.2",
    "stype": "taa",
    "freq": "daily"
   },
   {
-   "name": "schwoerer-rp-gold-scv/schwoerer-rp-gold-scv-no-filter",
-   "start": "1986",
-   "sharpe": "0.73",
-   "dsr": "0.855",
-   "ssr": "0.19",
-   "ssr4": "0.1851",
+   "rank": 171,
+   "id": 191,
+   "name": "sma-trend/sma-trend-tlt",
+   "start": "1990",
+   "sharpe": "0.56",
+   "dsr": "0.454",
+   "ssr": "0.18",
+   "ssr4": "0.1824",
    "pct": [
-    "0.09",
-    "0.44"
+    "0.08",
+    "0.45"
    ],
-   "turnover": "0.6",
+   "turnover": "1.9",
    "stype": "taa",
    "freq": "monthly"
   },
   {
-   "name": "sma-trend/sma-trend-tlt",
-   "start": "1991",
-   "sharpe": "0.56",
-   "dsr": "0.508",
-   "ssr": "0.18",
-   "ssr4": "0.1814",
+   "rank": 172,
+   "id": 189,
+   "name": "sma-trend/sma-trend-gld",
+   "start": "1990",
+   "sharpe": "0.47",
+   "dsr": "0.250",
+   "ssr": "0.11",
+   "ssr4": "0.1103",
+   "pct": [
+    "-0.01",
+    "0.34"
+   ],
+   "turnover": "2.1",
+   "stype": "taa",
+   "freq": "monthly"
+  },
+  {
+   "rank": 173,
+   "id": 58,
+   "name": "gold-cross-asset/gold-cross-asset-base",
+   "start": "1985",
+   "sharpe": "0.69",
+   "dsr": "0.728",
+   "ssr": "0.09",
+   "ssr4": "0.0890",
    "pct": [
     "0.07",
-    "0.46"
-   ],
-   "turnover": "1.8",
-   "stype": "taa",
-   "freq": "monthly"
-  },
-  {
-   "name": "sma-trend/sma-trend-gld",
-   "start": "1991",
-   "sharpe": "0.57",
-   "dsr": "0.538",
-   "ssr": "0.15",
-   "ssr4": "0.1537",
-   "pct": [
-    "0.02",
     "0.43"
    ],
-   "turnover": "1.7",
+   "turnover": "1.6",
    "stype": "taa",
    "freq": "monthly"
   }
@@ -379,179 +429,179 @@
  "selected": [
   {
    "name": "haa/haa-standard",
+   "rank": 66,
    "start": "1974",
-   "sharpe": "1.49",
+   "sharpe": "1.50",
    "dsr": "1.000",
    "ssr": "0.48",
-   "ssr_2000": "0.89",
+   "ssr_2000": "0.87",
    "ssr_2008": "0.91",
-   "q_le05": "0.22",
-   "q_le05_raw": 0.221
+   "q_le05": "0.22"
   },
   {
    "name": "baa/baa-g12",
-   "start": "1986",
-   "sharpe": "1.28",
+   "rank": 20,
+   "start": "1985",
+   "sharpe": "1.31",
    "dsr": "1.000",
-   "ssr": "0.60",
+   "ssr": "0.61",
    "ssr_2000": "0.51",
    "ssr_2008": "0.50",
-   "q_le05": "0.22",
-   "q_le05_raw": 0.2155
+   "q_le05": "0.20"
   },
   {
    "name": "daa/daa-g12",
-   "start": "1986",
-   "sharpe": "1.29",
+   "rank": 45,
+   "start": "1985",
+   "sharpe": "1.31",
    "dsr": "1.000",
-   "ssr": "0.51",
+   "ssr": "0.52",
    "ssr_2000": "0.48",
    "ssr_2008": "0.48",
-   "q_le05": "0.42",
-   "q_le05_raw": 0.418
+   "q_le05": "0.48"
   },
   {
    "name": "paa/paa-high",
-   "start": "1986",
-   "sharpe": "1.27",
+   "rank": 54,
+   "start": "1985",
+   "sharpe": "1.35",
    "dsr": "1.000",
-   "ssr": "0.52",
-   "ssr_2000": "0.42",
+   "ssr": "0.50",
+   "ssr_2000": "0.43",
    "ssr_2008": "0.43",
-   "q_le05": "0.42",
-   "q_le05_raw": 0.421
+   "q_le05": "0.43"
   },
   {
    "name": "laa/laa-standard",
-   "start": "1986",
-   "sharpe": "1.18",
+   "rank": 18,
+   "start": "1985",
+   "sharpe": "1.21",
    "dsr": "1.000",
-   "ssr": "0.63",
+   "ssr": "0.62",
    "ssr_2000": "0.69",
    "ssr_2008": "0.77",
-   "q_le05": "0.43",
-   "q_le05_raw": 0.433
+   "q_le05": "0.45"
   },
   {
    "name": "vitral-multi-asset-momentum/vitral-mam-standard",
-   "start": "1986",
-   "sharpe": "1.25",
+   "rank": 19,
+   "start": "1985",
+   "sharpe": "1.31",
    "dsr": "1.000",
-   "ssr": "0.60",
+   "ssr": "0.61",
    "ssr_2000": "0.57",
    "ssr_2008": "0.53",
-   "q_le05": "0.26",
-   "q_le05_raw": 0.262
+   "q_le05": "0.30"
   },
   {
    "name": "momentum-correlation-triplet/mom-corr-triplet-standard",
+   "rank": 1,
    "start": "1987",
-   "sharpe": "1.25",
+   "sharpe": "1.21",
    "dsr": "1.000",
-   "ssr": "0.91",
+   "ssr": "0.94",
    "ssr_2000": "0.90",
    "ssr_2008": "0.77",
-   "q_le05": "0.10",
-   "q_le05_raw": 0.1
+   "q_le05": "0.12"
   },
   {
    "name": "gtaa/gtaa-5",
-   "start": "1986",
-   "sharpe": "1.14",
+   "rank": 68,
+   "start": "1985",
+   "sharpe": "1.18",
    "dsr": "1.000",
-   "ssr": "0.46",
-   "ssr_2000": "0.40",
+   "ssr": "0.48",
+   "ssr_2000": "0.41",
    "ssr_2008": "0.85",
-   "q_le05": "0.61",
-   "q_le05_raw": 0.605
+   "q_le05": "0.60"
   },
   {
    "name": "adm/adm-standard",
-   "start": "1986",
-   "sharpe": "1.10",
-   "dsr": "1.000",
-   "ssr": "0.53",
-   "ssr_2000": "0.51",
+   "rank": 93,
+   "start": "1985",
+   "sharpe": "1.07",
+   "dsr": "0.999",
+   "ssr": "0.43",
+   "ssr_2000": "0.50",
    "ssr_2008": "0.60",
-   "q_le05": "0.44",
-   "q_le05_raw": 0.444
+   "q_le05": "0.76"
   },
   {
    "name": "gem/gem-standard",
-   "start": "1986",
-   "sharpe": "1.05",
-   "dsr": "0.998",
-   "ssr": "0.41",
+   "rank": 100,
+   "start": "1985",
+   "sharpe": "1.10",
+   "dsr": "0.999",
+   "ssr": "0.42",
    "ssr_2000": "0.38",
    "ssr_2008": "0.52",
-   "q_le05": "0.83",
-   "q_le05_raw": 0.828
+   "q_le05": "0.82"
   },
   {
    "name": "sma-trend/sma-trend-spy",
-   "start": "1991",
-   "sharpe": "1.02",
-   "dsr": "0.994",
+   "rank": 80,
+   "start": "1990",
+   "sharpe": "0.97",
+   "dsr": "0.983",
    "ssr": "0.46",
    "ssr_2000": "0.60",
    "ssr_2008": "0.57",
-   "q_le05": "0.77",
-   "q_le05_raw": 0.7675
+   "q_le05": "0.75"
   },
   {
    "name": "century-momentum/century-momentum-standard",
+   "rank": 107,
    "start": "1928",
-   "sharpe": "0.94",
-   "dsr": "1.000",
-   "ssr": "0.40",
-   "ssr_2000": "0.59",
-   "ssr_2008": "0.66",
-   "q_le05": "0.96",
-   "q_le05_raw": 0.9645
+   "sharpe": "0.95",
+   "dsr": "0.999",
+   "ssr": "0.41",
+   "ssr_2000": "0.64",
+   "ssr_2008": "0.67",
+   "q_le05": "0.95"
   },
   {
    "name": "golden-butterfly/golden-butterfly-base",
-   "start": "1988",
-   "sharpe": "1.15",
+   "rank": 61,
+   "start": "1985",
+   "sharpe": "1.16",
    "dsr": "0.999",
    "ssr": "0.49",
    "ssr_2000": "0.53",
    "ssr_2008": "0.62",
-   "q_le05": "0.60",
-   "q_le05_raw": 0.5995
+   "q_le05": "0.61"
   },
   {
    "name": "all-weather-dalio/all-weather-dalio-base",
+   "rank": 49,
    "start": "1972",
    "sharpe": "1.07",
    "dsr": "1.000",
-   "ssr": "0.52",
+   "ssr": "0.51",
    "ssr_2000": "0.42",
    "ssr_2008": "0.38",
-   "q_le05": "0.65",
-   "q_le05_raw": 0.645
+   "q_le05": "0.66"
   },
   {
    "name": "classic-60-40/classic-60-40-base",
+   "rank": 158,
    "start": "1923",
    "sharpe": "0.79",
-   "dsr": "0.989",
+   "dsr": "0.979",
    "ssr": "0.31",
    "ssr_2000": "0.37",
    "ssr_2008": "0.62",
-   "q_le05": "1.00",
-   "q_le05_raw": 0.999
+   "q_le05": "1.00"
   },
   {
    "name": "buy-the-dip/buy-the-dip-standard",
+   "rank": 109,
    "start": "1985",
-   "sharpe": "1.04",
-   "dsr": "0.990",
+   "sharpe": "1.05",
+   "dsr": "0.987",
    "ssr": "0.41",
-   "ssr_2000": "0.94",
-   "ssr_2008": "1.01",
-   "q_le05": "0.55",
-   "q_le05_raw": 0.548
+   "ssr_2000": "0.91",
+   "ssr_2008": "1.05",
+   "q_le05": "0.55"
   }
  ],
  "benchmarks": [
@@ -658,68 +708,83 @@
   "haa/haa-standard": {
    "n_windows": 595,
    "min_z_ann": "0.26",
-   "mean_z_ann": "1.57",
-   "naive_sd": "0.18",
-   "hac_sd": "0.94",
-   "hac_over_naive": "5.17",
+   "mean_z_ann": "1.58",
+   "mean_z": "0.457",
+   "naive_sd": "0.184",
+   "hac_sd": "0.948",
+   "hac_over_naive": "5.2",
    "neg_share": 0.0,
+   "neg_count": 0,
    "bootmean": "0.58",
    "pct": [
     "0.42",
-    "0.84"
+    "0.83"
    ],
    "basic": [
     "0.13",
     "0.55"
    ],
    "ssr": "0.48",
-   "ssr_2000": "0.89"
+   "ssr_2000": "0.87",
+   "sharpe": "1.50",
+   "rolling_start": "1977-02",
+   "months": 630
   },
   "momentum-correlation-triplet/mom-corr-triplet-standard": {
    "n_windows": 431,
    "min_z_ann": "0.19",
-   "mean_z_ann": "1.23",
-   "naive_sd": "0.11",
-   "hac_sd": "0.39",
-   "hac_over_naive": "3.73",
+   "mean_z_ann": "1.18",
+   "mean_z": "0.342",
+   "naive_sd": "0.104",
+   "hac_sd": "0.365",
+   "hac_over_naive": "3.5",
    "neg_share": 0.0,
-   "bootmean": "0.69",
+   "neg_count": 0,
+   "bootmean": "0.67",
    "pct": [
-    "0.44",
-    "1.10"
+    "0.43",
+    "1.02"
    ],
    "basic": [
-    "0.71",
-    "1.38"
+    "0.85",
+    "1.44"
    ],
-   "ssr": "0.91",
-   "ssr_2000": "0.90"
+   "ssr": "0.94",
+   "ssr_2000": "0.90",
+   "sharpe": "1.21",
+   "rolling_start": "1990-10",
+   "months": 466
   },
   "gem/gem-standard": {
-   "n_windows": 451,
+   "n_windows": 464,
    "min_z_ann": "-0.11",
-   "mean_z_ann": "1.06",
-   "naive_sd": "0.16",
-   "hac_sd": "0.76",
-   "hac_over_naive": "4.61",
-   "neg_share": 0.0066518847006651885,
+   "mean_z_ann": "1.08",
+   "mean_z": "0.311",
+   "naive_sd": "0.163",
+   "hac_sd": "0.748",
+   "hac_over_naive": "4.6",
+   "neg_share": 0.00646551724137931,
+   "neg_count": 3,
    "bootmean": "0.42",
    "pct": [
-    "0.27",
+    "0.28",
     "0.64"
    ],
    "basic": [
-    "0.17",
-    "0.54"
+    "0.19",
+    "0.55"
    ],
-   "ssr": "0.41",
-   "ssr_2000": "0.38"
+   "ssr": "0.42",
+   "ssr_2000": "0.38",
+   "sharpe": "1.10",
+   "rolling_start": "1988-01",
+   "months": 499
   }
  },
  "family_ranges": {
   "haa": [
-   "0.32",
-   "0.57",
+   "0.33",
+   "0.58",
    16
   ],
   "buy-the-dip": [
@@ -728,48 +793,48 @@
    1
   ],
   "tqqq-trend": [
-   "0.55",
    "0.56",
+   "0.57",
    2
   ],
   "defense-first": [
-   "0.55",
-   "0.55",
+   "0.54",
+   "0.54",
    1
   ],
   "aca-dynamic-bond": [
    "0.30",
-   "0.39",
+   "0.40",
    4
   ],
   "split-momentum-pair": [
-   "0.34",
-   "0.34",
+   "0.33",
+   "0.33",
    1
   ],
   "momentum-correlation-triplet": [
-   "0.80",
-   "0.91",
+   "0.86",
+   "0.94",
    3
   ],
   "baa": [
-   "0.53",
-   "0.60",
+   "0.52",
+   "0.61",
    2
   ],
   "vaa": [
-   "0.36",
    "0.37",
+   "0.40",
    3
   ],
   "daa": [
-   "0.49",
-   "0.51",
+   "0.52",
+   "0.54",
    2
   ],
   "gem": [
-   "0.41",
-   "0.41",
+   "0.42",
+   "0.42",
    1
   ],
   "papa-bear": [
@@ -778,18 +843,18 @@
    1
   ],
   "adm": [
-   "0.49",
-   "0.53",
+   "0.38",
+   "0.43",
    3
   ],
   "gtaa": [
-   "0.46",
-   "0.56",
+   "0.48",
+   "0.54",
    2
   ],
   "paa": [
-   "0.52",
-   "0.58",
+   "0.50",
+   "0.54",
    2
   ],
   "mama-bear": [
@@ -798,18 +863,18 @@
    1
   ],
   "cdm": [
-   "0.35",
-   "0.35",
+   "0.36",
+   "0.36",
    1
   ],
   "gpm": [
-   "0.54",
-   "0.54",
+   "0.56",
+   "0.56",
    1
   ],
   "eaa": [
-   "0.42",
-   "0.45",
+   "0.41",
+   "0.46",
    2
   ],
   "uis": [
@@ -818,48 +883,48 @@
    1
   ],
   "ivy": [
-   "0.44",
-   "0.44",
+   "0.46",
+   "0.46",
    1
   ],
   "laa": [
-   "0.63",
-   "0.63",
+   "0.62",
+   "0.62",
    1
   ],
   "dms-russell": [
-   "0.51",
-   "0.51",
+   "0.49",
+   "0.49",
    1
   ],
   "dms-triad": [
-   "0.59",
-   "0.68",
+   "0.66",
+   "0.72",
    3
   ],
   "dms-global-navigator": [
-   "0.51",
-   "0.51",
+   "0.50",
+   "0.50",
    1
   ],
   "dms-lt-gain": [
-   "0.45",
-   "0.48",
+   "0.40",
+   "0.44",
    2
   ],
   "dms-gpmv": [
-   "0.66",
-   "0.66",
+   "0.64",
+   "0.64",
    1
   ],
   "dms-bamboo": [
-   "0.30",
-   "0.46",
+   "0.31",
+   "0.50",
    3
   ],
   "schwoerer-rpm": [
-   "0.52",
-   "0.52",
+   "0.51",
+   "0.51",
    1
   ],
   "carter-12pct": [
@@ -873,8 +938,8 @@
    1
   ],
   "gold-cross-asset": [
-   "0.22",
-   "0.22",
+   "0.09",
+   "0.09",
    1
   ],
   "paired-switching": [
@@ -883,33 +948,33 @@
    1
   ],
   "adaptive-aa": [
-   "0.43",
-   "0.43",
+   "0.48",
+   "0.48",
    1
   ],
   "rpea": [
    "0.42",
-   "0.44",
+   "0.45",
    2
   ],
   "robust-aa": [
-   "0.38",
-   "0.42",
+   "0.39",
+   "0.43",
    2
   ],
   "tactical-permanent": [
-   "0.48",
-   "0.48",
+   "0.49",
+   "0.49",
    1
   ],
   "trinity": [
-   "0.46",
-   "0.46",
+   "0.49",
+   "0.49",
    1
   ],
   "pragmatic-aa": [
-   "0.68",
-   "0.68",
+   "0.73",
+   "0.73",
    1
   ],
   "growth-trend-timing": [
@@ -918,22 +983,22 @@
    1
   ],
   "diversified-dm": [
-   "0.36",
-   "0.36",
+   "0.37",
+   "0.37",
    1
   ],
   "permanent-portfolio": [
+   "0.50",
    "0.51",
-   "0.52",
    2
   ],
   "schwoerer-rp-gold-scv": [
-   "0.19",
-   "0.43",
+   "0.38",
+   "0.39",
    3
   ],
   "kda": [
-   "0.31",
+   "0.33",
    "0.34",
    3
   ],
@@ -943,13 +1008,13 @@
    1
   ],
   "bogleheads-3-fund": [
-   "0.32",
-   "0.35",
+   "0.33",
+   "0.37",
    2
   ],
   "all-weather-dalio": [
-   "0.52",
-   "0.52",
+   "0.51",
+   "0.51",
    1
   ],
   "golden-butterfly": [
@@ -958,48 +1023,48 @@
    1
   ],
   "permanent-portfolio-static": [
-   "0.53",
-   "0.53",
+   "0.52",
+   "0.52",
    1
   ],
   "core-four-ferri": [
-   "0.32",
-   "0.32",
+   "0.33",
+   "0.33",
    1
   ],
   "swensen-yale": [
-   "0.37",
-   "0.37",
+   "0.39",
+   "0.39",
    1
   ],
   "simple-path-wealth": [
-   "0.29",
+   "0.30",
    "0.33",
    2
   ],
   "coffeehouse": [
-   "0.35",
-   "0.35",
+   "0.36",
+   "0.36",
    1
   ],
   "no-brainer-bernstein": [
-   "0.34",
-   "0.34",
+   "0.35",
+   "0.35",
    1
   ],
   "us-market-benchmark": [
-   "0.29",
-   "0.29",
+   "0.27",
+   "0.27",
    1
   ],
   "global-market-benchmark": [
-   "0.29",
-   "0.29",
+   "0.30",
+   "0.30",
    1
   ],
   "desert-portfolio": [
-   "0.65",
-   "0.65",
+   "0.64",
+   "0.64",
    1
   ],
   "cockroach-portfolio": [
@@ -1008,8 +1073,8 @@
    1
   ],
   "vix-shield": [
-   "0.21",
-   "0.40",
+   "0.20",
+   "0.44",
    3
   ],
   "regime-detector": [
@@ -1018,58 +1083,58 @@
    3
   ],
   "golden-ratio": [
-   "0.59",
-   "0.59",
+   "0.52",
+   "0.52",
    1
   ],
   "growth-inflation-sector-timing": [
-   "0.40",
+   "0.39",
    "0.53",
    2
   ],
   "composite-momentum": [
-   "0.37",
-   "0.53",
+   "0.44",
+   "0.59",
    3
   ],
   "rvol-shifter": [
-   "0.38",
-   "0.75",
+   "0.36",
+   "0.60",
    4
   ],
   "vitral-multi-asset-momentum": [
-   "0.60",
-   "0.65",
+   "0.61",
+   "0.67",
    3
   ],
   "kiss-momentum": [
-   "0.56",
-   "0.66",
+   "0.58",
+   "0.65",
    4
   ],
   "dragon-4321": [
-   "0.43",
-   "0.50",
+   "0.45",
+   "0.56",
    3
   ],
   "faber-12m-high": [
-   "0.52",
-   "0.54",
+   "0.53",
+   "0.56",
    2
   ],
   "predicting-treasury": [
-   "0.30",
-   "0.30",
+   "0.32",
+   "0.32",
    1
   ],
   "alphaone-momentum": [
-   "0.81",
-   "0.81",
+   "0.54",
+   "0.54",
    1
   ],
   "dynamic-macro-allocation-sadek": [
-   "0.45",
-   "0.45",
+   "0.47",
+   "0.47",
    1
   ],
   "sadek-spy-band": [
@@ -1078,8 +1143,8 @@
    1
   ],
   "permanent-portfolio-gave": [
-   "0.39",
-   "0.39",
+   "0.42",
+   "0.42",
    1
   ],
   "permanent-portfolio-nlx": [
@@ -1088,32 +1153,32 @@
    2
   ],
   "return-stacked-quartet": [
-   "0.44",
-   "0.44",
+   "0.45",
+   "0.45",
    1
   ],
   "sector-rotation": [
-   "0.32",
-   "0.38",
+   "0.30",
+   "0.37",
    3
   ],
   "low-initiative-letf-v2": [
-   "0.87",
-   "0.87",
+   "0.77",
+   "0.77",
    1
   ],
   "tqqq-qqq-band": [
    "0.32",
-   "0.33",
+   "0.34",
    2
   ],
   "century-momentum": [
    "0.38",
-   "0.40",
+   "0.41",
    2
   ],
   "sma-trend": [
-   "0.15",
+   "0.11",
    "0.46",
    6
   ],
@@ -1123,17 +1188,17 @@
    3
   ],
   "letf-sso-zroz-gld": [
-   "0.33",
-   "0.43",
+   "0.34",
+   "0.42",
    2
   ],
   "letf-upro-zroz-gld": [
-   "0.28",
+   "0.29",
    "0.39",
    2
   ],
   "letf-upro-zroz-gld-kmlm": [
-   "0.31",
+   "0.32",
    "0.41",
    2
   ],
@@ -1143,18 +1208,18 @@
    1
   ],
   "orthogonal-alpha-btal": [
-   "0.37",
-   "0.37",
+   "0.38",
+   "0.38",
    1
   ],
   "equity-managed-futures": [
-   "0.36",
-   "0.36",
+   "0.42",
+   "0.42",
    1
   ],
   "rp3-trend-tilted-core": [
-   "0.50",
-   "0.56",
+   "0.57",
+   "0.58",
    2
   ],
   "tqqq-tlt-dual-gate": [
@@ -1168,21 +1233,21 @@
    1
   ],
   "inflation-compass": [
-   "0.41",
-   "0.48",
+   "0.40",
+   "0.47",
    3
   ],
   "tqqq-quadrant-stack": [
-   "0.65",
-   "0.66",
+   "0.64",
+   "0.67",
    2
   ]
  },
  "rank_of": {
-  "classic-60-40/classic-60-40-base": 156,
+  "classic-60-40/classic-60-40-base": 158,
   "paired-switching/paired-switching-spy-tlt": 165,
-  "uis/uis-standard": 166,
-  "haa/haa-standard": 65
- },
- "classic_6040_ssr": "0.31"
+  "uis/uis-standard": 167,
+  "haa/haa-standard": 66,
+  "us-market-benchmark/us-market-100": 166
+ }
 }

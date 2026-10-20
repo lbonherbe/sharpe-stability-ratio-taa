@@ -1,12 +1,11 @@
-"""Figure 1 of paper version 0.6 (the worked example): rolling 36-month Sharpe ratio of HAA and the
-Momentum-Correlation Triplet, and the autocorrelation of each rolling series. Same extract, estimator and
-cutoff as the study (completed months through 2026-08-31). Prints the values of Table 1 and stops unless
-they equal results/published_variants.csv. Usage: SSR_DATA_DIR=/path/to/extracts python code/make_fig_v06.py"""
+"""Paper v0.7 Figure 1 (the v0.6 script on the v0.7 inputs; only the paths change): rolling 36-month Sharpe of HAA and the Momentum-Correlation Triplet,
+with the autocorrelation of each rolling series. Same data, estimator and cutoff as the v0.5 study
+(v07/inputs, completed months through 2026-08-31). Prints the values it uses and asserts that
+they equal the v0.5 supplementary table, so the figure adds no new number to the paper."""
 import csv, json, math, os, sys
 import numpy as np
-HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..")
+HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..")
 sys.path.insert(0, HERE)
-DATA = os.environ.get("SSR_DATA_DIR", os.path.join(ROOT, "data"))
 import _chartkit as ck
 import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
 from numpy.lib.stride_tricks import sliding_window_view
@@ -23,10 +22,10 @@ def rets(nav):
     ks = sorted(k for k in nav if k <= CUTOFF + "T"); v = np.array([float(nav[k]) for k in ks]); return ks[1:], v[1:] / v[:-1] - 1
 
 navs = {}
-for line in open(os.path.join(DATA, "variants_monthend.jsonl")):
+for line in open(os.path.join(ROOT, "v07", "inputs", "variants_monthend.jsonl")):
     d = json.loads(line)
     if d["variant_id"] in (1, 10): navs[d["variant_id"]] = d["nav"]
-supp = {r["variant_id"]: r for r in csv.DictReader(open(os.path.join(ROOT, "results", "published_variants.csv")))}
+supp = {r["variant_id"]: r for r in csv.DictReader(open(os.path.join(ROOT, "v07", "results", "main", "published_variants.csv")))}
 S = {}
 for vid, label in ((1, "HAA"), (10, "Triplet")):
     dates, r = rets(navs[vid]); z = rolling_sharpe(r); v = nw_var(z, L)
@@ -55,4 +54,4 @@ a2.plot(k[:37], 1 - k[:37] / 36, color=ck.MUTED, lw=1, ls=":", label="overlap al
 a2.axhline(0, color=ck.INK, lw=.8, alpha=.6); a2.set_xlabel("lag k, months"); a2.set_ylabel("autocorrelation")
 a2.set_title("B. Memory of the rolling series", fontsize=11, loc="left"); a2.legend(frameon=False, fontsize=8, loc="upper right"); ck.style(a2)
 fig.tight_layout()
-out = os.path.join(os.environ.get("SSR_CHART_DIR", os.path.join(ROOT, "charts")), "fig_v06_worked_example.png"); fig.savefig(out, dpi=125, bbox_inches="tight"); print("wrote", out)
+out = os.path.join(ROOT, "v07", "charts", "fig_v07_worked_example.png"); fig.savefig(out, dpi=125, bbox_inches="tight"); print("wrote", out)

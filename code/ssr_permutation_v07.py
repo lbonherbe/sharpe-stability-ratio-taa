@@ -1,4 +1,6 @@
-"""Permutation benchmark for the SSR working paper, version 0.5 (Section 6.5).
+"""v0.7 impact copy (2026-10-17): adds SSR_EXCESS=1 and SSR_SUPP; method, B and seed unchanged.
+
+Permutation benchmark for the SSR working paper, version 0.5 (Section 6.5).
 
 Question: how much of a series' SSR comes from the level of its Sharpe ratio, and how much from the
 order in which its monthly returns arrived? Reordering a series' own monthly returns at random keeps
@@ -25,7 +27,7 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 # Month-end extracts are not redistributed in this archive; see data/README.md. Point SSR_DATA_DIR at a folder holding them.
 A = os.environ.get("SSR_DATA_DIR", os.path.join(_HERE, "..", "data"))
 OUT = os.environ.get("SSR_OUT_DIR", os.path.join(_HERE, "..", "results")); os.makedirs(OUT, exist_ok=True)
-SUPP = os.path.join(_HERE, "..", "results", "published_variants.csv")
+SUPP = os.environ.get("SSR_SUPP", os.path.join(_HERE, "..", "results", "published_variants.csv"))  # v0.7: the matching study run
 CUTOFF = "2026-08-31"
 EXCLUDED_STRATEGIES = {"ggcem"}
 W = 36; L = 35; GATE = 120
@@ -74,9 +76,26 @@ def spearman(a, b):
     a = np.asarray(a, float); b = np.asarray(b, float); m = np.isfinite(a) & np.isfinite(b)
     return float(np.corrcoef(ranks(a[m]), ranks(b[m]))[0, 1])
 
+# v0.7 impact study: SSR_EXCESS=1 measures returns above USD cash, exactly as ssr_study_v07.py
+EXCESS = os.environ.get("SSR_EXCESS") == "1"
+if EXCESS:
+    import bisect, datetime as _dt
+    _cash = [l.strip().split(",")[:2] for l in open(f"{A}/cash_usd.csv").readlines()[1:] if l.strip()]
+    CASH_D = [d for d, _ in _cash]; CASH_V = [float(v) for _, v in _cash]
+    def cash_level_at(day):
+        i = bisect.bisect_right(CASH_D, day) - 1
+        if i < 0: return None
+        if (_dt.date.fromisoformat(day) - _dt.date.fromisoformat(CASH_D[i])).days > 7: return None
+        return CASH_V[i]
+
 def rets_from_nav(nav, cutoff=CUTOFF):
     ks = sorted(k for k in nav if k <= cutoff + "T"); v = np.array([float(nav[k]) for k in ks])
-    return ks[1:], v[1:] / v[:-1] - 1.0
+    r = v[1:] / v[:-1] - 1.0
+    if EXCESS:
+        lv = [cash_level_at(k[:10]) for k in ks]
+        if any(x is None for x in lv): raise SystemExit(f"no USD cash level near {ks[lv.index(None)]}")
+        lv = np.array(lv); r = r - (lv[1:] / lv[:-1] - 1.0)
+    return ks[1:], r
 
 def window(dates, r, start=None, end=None):
     m = np.array([(start is None or d >= start) and (end is None or d <= end) for d in dates]); return np.asarray(r)[m]

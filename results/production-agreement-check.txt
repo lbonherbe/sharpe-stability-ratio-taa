@@ -1,4 +1,5 @@
-compared 217 variants; max |diff| = 4.44e-16 (variant 243: production 1.601970 vs proto 1.601970); median |diff| = 0.00e+00; None where proto had a value: [48, 56]
+module members: ['Any', 'AsyncSession', 'FULL_HISTORY_FLOOR', 'MIN_MONTHS', 'SSR_DEFINITION', 'SSR_EXCESS_DEFINITION', 'SSR_EXCESS_STEADY_THRESHOLD', 'SSR_META', 'SSR_STEADY_THRESHOLD', 'SharpeStability', 'Strategy', 'StrategyVariant', 'WINDOW_MONTHS', 'ZERO_DEVIATION', 'annotations', 'asyncio', 'clear_ssr_cache', 'current_ssr_definition', 'current_ssr_steady_threshold', 'dataclass', 'date', 'get_catalog_ssr', 'math', 'monthly_returns_from_nav', 'newey_west_longrun_variance', 'np', 'rolling_sharpe', 'select', 'sharpe_stability_from_month_end_rows', 'sharpe_stability_from_monthly_returns']
+compared 217 variants; max |diff| = 3.33e-16 (variant 10: production 0.936979 vs proto 0.936979); median |diff| = 0.00e+00; None where proto had a value: [48, 56]
 fixture w=36 n=200: production 0.3070538560693961 vs ref 0.30705386
 fixture w=12 n=200: production 0.2666770010429096 vs ref 0.26667700
 fixture w=36 n=60: production None vs ref 4.84298115

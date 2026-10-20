@@ -1,0 +1,381 @@
+=== Part 1: mean SSR of iid normal monthly returns (2000 replicates per cell) ===
+  Sharpe 0.5, 486 months: mean 0.204  sd 0.082  p95 0.348  mean/Sharpe 0.407
+  Sharpe 1.0, 486 months: mean 0.398  sd 0.110  p95 0.599  mean/Sharpe 0.398
+  Sharpe 1.5, 486 months: mean 0.581  sd 0.145  p95 0.838  mean/Sharpe 0.387
+  Sharpe 2.0, 486 months: mean 0.751  sd 0.180  p95 1.088  mean/Sharpe 0.376
+  Sharpe 1.0,  120 months: mean 0.797  sd 0.581  p95 1.932
+  Sharpe 1.0,  220 months: mean 0.496  sd 0.232  p95 0.931
+  Sharpe 1.0,  486 months: mean 0.395  sd 0.113  p95 0.600
+  Sharpe 1.0, 1274 months: mean 0.361  sd 0.058  p95 0.467
+[part 1: 1s]
+
+=== Part 2: 173 published variants + 7 benchmarks, B = 10000 ===
+identity check: all 173 full-history and 2000-window SSRs equal the supplementary table at 4 decimals (max diff 0.0e+00)
+[part 2: 253s]
+
+variants: 173
+multiple: min 0.31 p10 0.84 q1 0.99 median 1.12 q3 1.22 p90 1.42 max 2.12
+>=1.5: 13  >=2.0: 2  <=1.0: 46  <1.0: 46
+p<0.05: 25 (about 8.7 expected if every series were order-free and independent)  p<0.01: 5  BH 5%: 0
+shuffled mean on Sharpe through the origin: slope 0.391, Pearson 0.972; median shuffled mean 0.399
+Spearman: multiple~Sharpe -0.01  SSR~Sharpe 0.64  multiple~SSR 0.70  multiple~SSR/Sharpe 0.97
+Spearman with history length: (shuffled mean / Sharpe) -0.52  multiple -0.12  SSR 0.07
+
+--- all series, full history, by multiple ---
+name                                                  win    from    mo Sharpe   SSR shufl  mult       p
+low-initiative-letf-v2/low-initiative-letf-v2-standa full 2002-02   295   0.82  0.77  0.36  2.12  0.0072
+momentum-correlation-triplet/mom-corr-triplet-smartl full 1987-11   466   1.07  0.86  0.42  2.04  0.0014
+momentum-correlation-triplet/mom-corr-triplet-standa full 1987-11   466   1.21  0.94  0.47  2.00  0.0016
+tqqq-tlt-dual-gate/tqqq-tlt-dual-gate-standard       full 1986-08   481   0.66  0.48  0.27  1.79  0.0060
+momentum-correlation-triplet/mom-corr-triplet-plus   full 1985-02   499   1.25  0.86  0.48  1.78  0.0051
+rvol-shifter/rvol-shifter-cash-only                  full 2000-02   319   0.81  0.60  0.35  1.68  0.0323
+tqqq-quadrant-stack/tqqq-quadrant-stack-buffered     full 1996-02   367   0.96  0.67  0.40  1.66  0.0259
+pragmatic-aa/pragmatic-aa-standard                   full 1985-02   499   1.18  0.73  0.45  1.63  0.0121
+dms-triad/dms-triad-plus                             full 1985-02   499   1.17  0.72  0.46  1.58  0.0178
+vitral-multi-asset-momentum/vitral-mam-ensemble      full 1985-02   499   1.14  0.67  0.43  1.57  0.0158
+tqqq-quadrant-stack/tqqq-quadrant-stack-standard     full 1996-02   367   0.97  0.64  0.41  1.56  0.0409
+tqqq-trend/tqqq-trend-proxy                          full 1985-02   499   0.92  0.57  0.37  1.52  0.0247
+dms-triad/dms-triad-plus-plus                        full 1985-02   499   1.09  0.66  0.44  1.51  0.0256
+tqqq-trend/tqqq-trend-standard                       full 1985-02   499   0.93  0.56  0.37  1.50  0.0264
+dms-triad/dms-triad                                  full 1985-02   499   1.24  0.70  0.47  1.49  0.0272
+growth-inflation-sector-timing/growth-inflation-conc full 1987-11   466   0.89  0.53  0.36  1.48  0.0390
+rvol-shifter/rvol-shifter-wongkok-200sma             full 2000-02   319   0.75  0.46  0.32  1.43  0.0832
+kiss-momentum/kiss-combined-70-30                    full 1985-02   499   1.24  0.65  0.46  1.42  0.0294
+kiss-momentum/kiss-70-30-smartleverage               full 1985-02   499   1.06  0.58  0.41  1.42  0.0352
+gtaa/gtaa-agg3                                       full 1985-02   499   0.97  0.54  0.38  1.41  0.0475
+composite-momentum/composite-momentum-aggressive     full 1985-02   499   1.10  0.59  0.42  1.41  0.0427
+haa/haa-simple-leveraged-qld                         full 1974-03   630   0.81  0.45  0.32  1.39  0.0350
+alphaone-momentum/alphaone-momentum-standard         full 1993-09   396   0.91  0.54  0.39  1.38  0.0828
+growth-trend-timing/growth-trend-timing-standard     full 1985-02   499   1.04  0.54  0.39  1.38  0.0468
+dms-gpmv/dms-gpmv                                    full 1988-01   464   1.20  0.64  0.47  1.38  0.0614
+kiss-momentum/kiss-sys1-only                         full 1985-02   499   1.11  0.58  0.42  1.37  0.0478
+haa/haa-simple-momentum                              full 1974-03   630   1.12  0.58  0.42  1.37  0.0347
+kiss-momentum/kiss-combined-50-50                    full 1985-02   499   1.27  0.64  0.47  1.36  0.0532
+laa/laa-standard                                     full 1985-02   499   1.21  0.62  0.46  1.35  0.0691
+vitral-multi-asset-momentum/vitral-mam-low-protectio full 1985-02   499   1.29  0.66  0.50  1.32  0.0761
+desert-portfolio/desert-portfolio-base               full 1985-02   499   1.27  0.64  0.48  1.32  0.0794
+inflation-compass/inflation-compass-steady           full 1950-02   919   0.96  0.47  0.36  1.32  0.0282
+papa-bear/papa-bear-standard                         full 1985-02   499   0.94  0.47  0.36  1.29  0.0905
+all-weather-dalio/all-weather-dalio-base             full 1972-01   656   1.07  0.51  0.40  1.27  0.0787
+adaptive-aa/adaptive-aa-10asset                      full 1985-02   499   0.98  0.48  0.37  1.27  0.1007
+rvol-shifter/rvol-shifter-2-state                    full 2000-02   319   0.65  0.36  0.29  1.25  0.1734
+rp3-trend-tilted-core/rp3-trend-tilted-sma10         full 1972-02   655   1.19  0.58  0.47  1.25  0.0975
+tqqq-qqq-band/tqqq-qqq-band-vol-scaled-buffer        full 1985-11   490   0.63  0.32  0.26  1.24  0.1391
+sadek-spy-band/sadek-spy-band-standard               full 1985-11   490   0.87  0.41  0.34  1.24  0.1122
+dragon-4321/dragon-4321-capital-efficient            full 1985-02   499   1.12  0.54  0.44  1.23  0.1345
+dms-russell/dms-russell                              full 1985-02   499   1.05  0.49  0.40  1.23  0.1257
+rvol-shifter/rvol-shifter-3-state                    full 2000-02   319   0.76  0.41  0.33  1.23  0.1891
+sma-trend/sma-trend-spy                              full 1990-02   439   0.97  0.46  0.38  1.23  0.1448
+haa/haa-leveraged-3x                                 full 1974-03   630   1.07  0.52  0.42  1.22  0.1165
+haa/haa-simple-leveraged-3x                          full 1974-03   630   0.88  0.42  0.35  1.22  0.1205
+inflation-compass/inflation-compass-fast             full 1950-02   919   0.88  0.40  0.33  1.22  0.0780
+adaptive-6040/adaptive-6040-standard                 full 1985-02   499   1.09  0.49  0.40  1.22  0.1409
+carter-12pct/carter-12pct-base                       full 1985-02   499   0.98  0.47  0.39  1.22  0.1441
+haa/haa-simple-leveraged                             full 1974-03   630   0.98  0.46  0.38  1.21  0.1225
+carter-cash-trigger/carter-cash-trigger-spy          full 1988-01   464   1.01  0.47  0.39  1.21  0.1552
+eaa/eaa-golden-offensive                             full 1981-03   546   1.00  0.46  0.38  1.21  0.1380
+century-momentum/century-momentum-standard           full 1928-02  1183   0.95  0.41  0.34  1.21  0.0529
+rpea/rpea-adaptive                                   full 1985-02   499   0.93  0.45  0.37  1.21  0.1491
+mama-bear/mama-bear-standard                         full 1985-02   499   0.96  0.44  0.37  1.21  0.1430
+schwoerer-rpm/schwoerer-rpm-3asset                   full 1985-02   499   1.05  0.51  0.42  1.20  0.1646
+rp3-trend-tilted-core/rp3-trend-tilted-standard      full 1972-02   655   1.22  0.57  0.48  1.20  0.1354
+vitral-multi-asset-momentum/vitral-mam-standard      full 1985-02   499   1.31  0.61  0.51  1.20  0.1648
+defense-first/defense-first-standard                 full 1985-02   499   1.16  0.54  0.46  1.19  0.1695
+sma-trend/sma-trend-spy-10m                          full 1990-02   439   0.91  0.42  0.35  1.19  0.1788
+faber-12m-high/faber-12m-high-dynamic-bond           full 1985-02   499   1.22  0.56  0.47  1.19  0.1708
+permanent-portfolio-static/permanent-portfolio-stati full 1976-02   607   1.12  0.52  0.44  1.19  0.1534
+rpea/rpea-conservative                               full 1985-02   499   0.93  0.42  0.36  1.18  0.1678
+composite-momentum/composite-momentum-standard       full 1985-02   499   1.22  0.55  0.46  1.18  0.1743
+permanent-portfolio/permanent-portfolio-static       full 1960-02   799   1.12  0.50  0.42  1.17  0.1352
+baa/baa-g12                                          full 1985-02   499   1.31  0.61  0.52  1.17  0.1904
+growth-inflation-sector-timing/growth-inflation-dive full 1987-11   466   0.84  0.39  0.33  1.17  0.1990
+trinity/trinity-standard                             full 1985-02   499   1.13  0.49  0.42  1.17  0.1843
+dms-lt-gain/dms-lt-gain-plus                         full 1985-02   499   0.95  0.44  0.38  1.17  0.1936
+golden-ratio-dual-gate/golden-ratio-dual-gate-standa full 2008-05   220   1.12  0.62  0.54  1.16  0.2508
+dragon-4321/dragon-4321-leveraged                    full 1985-02   499   0.99  0.45  0.39  1.16  0.2014
+golden-butterfly/golden-butterfly-base               full 1985-02   499   1.16  0.49  0.42  1.16  0.1936
+century-momentum/century-momentum-cash               full 1928-02  1183   0.91  0.38  0.33  1.16  0.0967
+dms-global-navigator/dms-global-navigator-plus       full 1985-02   499   1.09  0.50  0.43  1.16  0.2015
+golden-ratio/golden-ratio-standard                   full 1985-02   499   1.21  0.52  0.45  1.15  0.2078
+tqqq-qqq-band/tqqq-qqq-band-standard                 full 1985-11   490   0.72  0.34  0.29  1.15  0.2270
+schwoerer-rp-gold-scv/schwoerer-rp-gold-scv-standard full 1985-02   499   0.87  0.39  0.34  1.14  0.2114
+gpm/gpm-standard                                     full 1985-02   499   1.22  0.56  0.49  1.14  0.2264
+us-market-benchmark/us-market-100                    full 1900-02  1519   0.63  0.27  0.23  1.14  0.0995
+voltarget-qqq/voltarget-qqq-conservative             full 1999-11   322   0.81  0.40  0.35  1.14  0.2529
+inflation-compass/inflation-compass-standard         full 1950-02   919   0.96  0.41  0.36  1.14  0.1729
+sma-trend/sma-trend-qqq                              full 1990-02   439   0.87  0.41  0.36  1.14  0.2375
+letf-upro-zroz-gld/letf-upro-zroz-gld-brake          full 1985-02   499   0.86  0.39  0.34  1.14  0.2268
+return-stacked-quartet/return-stacked-quartet-20-20- full 1985-02   499   1.02  0.45  0.40  1.14  0.2250
+swensen-yale/swensen-yale-base                       full 1985-02   499   0.92  0.39  0.34  1.13  0.2300
+faber-12m-high/faber-12m-high-standard               full 1985-02   499   1.22  0.53  0.47  1.13  0.2380
+letf-sso-zroz-gld/letf-sso-zroz-gld-brake            full 1985-02   499   0.97  0.42  0.38  1.12  0.2454
+dms-lt-gain/dms-lt-gain-plus-plus                    full 1985-02   499   0.85  0.40  0.35  1.12  0.2490
+haa/haa-quartet                                      full 1974-03   630   1.17  0.53  0.47  1.12  0.2310
+letf-upro-zroz-gld-kmlm/letf-upro-zroz-gld-kmlm-brak full 1985-02   499   0.92  0.41  0.37  1.11  0.2569
+regime-detector/regime-detector-smartlev-brake       full 1990-11   430   0.72  0.33  0.30  1.11  0.2751
+dragon-4321/dragon-4321-standard                     full 1985-02   499   1.30  0.56  0.50  1.11  0.2621
+voltarget-qqq/voltarget-qqq-balanced                 full 1999-11   322   0.73  0.35  0.32  1.11  0.2854
+sma-trend/sma-trend-vnq                              full 1990-02   439   0.63  0.30  0.27  1.11  0.2632
+no-brainer-bernstein/no-brainer-base                 full 1985-02   499   0.83  0.35  0.32  1.10  0.2698
+gtaa/gtaa-5                                          full 1985-02   499   1.18  0.48  0.44  1.10  0.2722
+Nasdaq 100 (QQQ)                                     full 1999-04   329   0.56  0.27  0.24  1.10  0.2972
+aca-dynamic-bond/aca-dynamic-bond-gold-sleeve        full 1985-12   489   0.68  0.30  0.28  1.09  0.2885
+sector-rotation/sector-rotation-top3-no-filter       full 1985-02   499   0.87  0.37  0.34  1.09  0.2817
+vix-shield/vix-shield-conservative                   full 1990-02   439   1.02  0.44  0.40  1.09  0.3025
+voltarget-qqq/voltarget-qqq-aggressive               full 1999-11   322   0.70  0.33  0.30  1.08  0.3196
+daa/daa-g12-smartstack                               full 1985-02   499   1.23  0.54  0.50  1.08  0.3043
+robust-aa/robust-aa-aggressive                       full 1985-02   499   1.05  0.43  0.40  1.07  0.3090
+dms-bamboo/dms-bamboo                                full 1985-02   499   1.23  0.50  0.47  1.07  0.3201
+ivy/ivy-timing                                       full 1985-02   499   1.16  0.46  0.43  1.07  0.3198
+composite-momentum/composite-momentum-smartstack     full 1985-02   499   1.08  0.44  0.42  1.06  0.3217
+Long Treasuries (VUSTX)                              full 1986-06   483   0.56  0.24  0.23  1.06  0.3375
+adm/adm-smartleverage-1.5x                           full 1985-02   499   1.01  0.41  0.39  1.06  0.3430
+haa/haa-simple                                       full 1974-03   630   1.27  0.50  0.48  1.06  0.3331
+classic-60-40/classic-60-40-base                     full 1923-01  1244   0.79  0.31  0.29  1.05  0.2965
+haa/haa-leveraged                                    full 1974-03   630   1.25  0.51  0.49  1.05  0.3451
+haa/haa-nlx-60-40                                    full 1974-03   630   1.18  0.48  0.45  1.05  0.3493
+Long Treasuries (TLT)                                full 2002-08   289   0.32  0.15  0.14  1.05  0.3814
+baa/baa-g4                                           full 1985-02   499   1.17  0.52  0.49  1.05  0.3543
+eaa/eaa-golden-defensive                             full 1981-03   546   1.02  0.41  0.39  1.05  0.3563
+dynamic-macro-allocation-sadek/dynamic-macro-allocat full 1988-02   463   1.15  0.47  0.45  1.04  0.3681
+coffeehouse/coffeehouse-base                         full 1985-02   499   0.95  0.36  0.35  1.03  0.3707
+aca-dynamic-bond/aca-dynamic-bond-stocks-sleeve      full 1985-12   489   0.82  0.33  0.32  1.03  0.3747
+cockroach-portfolio/cockroach-base                   full 1985-02   499   1.18  0.46  0.44  1.03  0.3894
+adm/adm-standard                                     full 1985-02   499   1.07  0.43  0.42  1.03  0.3869
+permanent-portfolio-nlx/permanent-portfolio-nlx-stan full 1985-02   499   1.16  0.45  0.44  1.03  0.3911
+permanent-portfolio-nlx/permanent-portfolio-nlx-2024 full 1985-02   499   1.21  0.48  0.47  1.02  0.3964
+paa/paa-dynamic-protection                           full 1985-02   499   1.36  0.54  0.53  1.02  0.3972
+aca-dynamic-bond/aca-dynamic-bond-reit-sleeve        full 1985-12   489   0.79  0.32  0.31  1.02  0.4042
+daa/daa-g12                                          full 1985-02   499   1.31  0.52  0.51  1.02  0.3984
+S&P 500 (VFINX)                                      full 1976-09   600   0.82  0.32  0.31  1.02  0.4068
+core-four-ferri/core-four-ferri-80-20                full 1985-02   499   0.87  0.33  0.33  1.02  0.4076
+paired-switching/paired-switching-spy-tlt            full 1920-07  1274   0.72  0.28  0.27  1.01  0.4354
+letf-sso-zroz-gld/letf-sso-zroz-gld-base             full 1985-02   499   0.87  0.34  0.33  1.01  0.4251
+bogleheads-3-fund/bogleheads-3-fund-moderate         full 1985-02   499   0.97  0.37  0.36  1.00  0.4324
+global-market-benchmark/global-market-60-40          full 1985-02   499   0.76  0.30  0.29  1.00  0.4354
+bogleheads-3-fund/bogleheads-3-fund-aggressive       full 1985-02   499   0.87  0.33  0.33  1.00  0.4341
+gem/gem-standard                                     full 1985-02   499   1.10  0.42  0.42  1.00  0.4473
+sector-rotation/sector-rotation-top5                 full 1985-02   499   0.87  0.33  0.34  0.99  0.4597
+haa/haa-leveraged-no-qqq                             full 1974-03   630   1.30  0.50  0.50  0.99  0.4702
+simple-path-wealth/simple-path-75-25                 full 1985-02   499   0.91  0.33  0.34  0.98  0.4832
+letf-upro-zroz-gld-kmlm/letf-upro-zroz-gld-kmlm-base full 1985-02   499   0.85  0.32  0.33  0.98  0.4792
+simple-path-wealth/simple-path-100                   full 1985-02   499   0.80  0.30  0.31  0.98  0.4817
+dms-bamboo/dms-bamboo-plus-plus                      full 1985-02   499   0.80  0.31  0.32  0.98  0.4946
+schwoerer-rp-gold-scv/schwoerer-rp-gold-scv-vbr      full 1985-02   499   0.98  0.38  0.39  0.97  0.5045
+paa/paa-high                                         full 1985-02   499   1.35  0.50  0.52  0.97  0.4992
+letf-upro-zroz-gld/letf-upro-zroz-gld-base           full 1985-02   499   0.76  0.29  0.30  0.97  0.5139
+equity-managed-futures/equity-managed-futures-standa full 1988-02   463   1.10  0.42  0.43  0.97  0.5013
+diversified-dm/diversified-dm-standard               full 1987-11   466   1.00  0.37  0.38  0.96  0.5114
+robust-aa/robust-aa-balanced                         full 1985-02   499   1.06  0.39  0.40  0.96  0.5128
+dms-bamboo/dms-bamboo-plus                           full 1985-02   499   0.99  0.37  0.38  0.96  0.5165
+haa/haa-smartleverage-1.5x                           full 1974-03   630   1.30  0.48  0.51  0.96  0.5412
+aca-dynamic-bond/aca-dynamic-bond-standard           full 1985-12   489   1.10  0.40  0.41  0.96  0.5279
+sector-rotation/sector-rotation-top3                 full 1985-02   499   0.82  0.30  0.32  0.95  0.5495
+split-momentum-pair/split-momentum-pair-standard     full 1985-02   499   0.89  0.33  0.35  0.95  0.5467
+tactical-permanent/tactical-permanent-standard       full 1960-02   799   1.37  0.49  0.52  0.94  0.6061
+adm/adm-smartstack                                   full 1985-02   499   1.03  0.38  0.41  0.94  0.5553
+permanent-portfolio/permanent-portfolio-tactical     full 1960-02   799   1.43  0.51  0.54  0.94  0.6092
+60/40 (VFINX/VBMFX)                                  full 1987-01   476   0.96  0.34  0.36  0.94  0.5633
+schwoerer-rp-gold-scv/schwoerer-rp-gold-scv-no-filte full 1985-02   499   1.04  0.38  0.41  0.93  0.5915
+buy-the-dip/buy-the-dip-standard                     full 1985-11   490   1.05  0.41  0.44  0.91  0.6432
+permanent-portfolio-gave/permanent-portfolio-gave-st full 1985-02   499   1.25  0.42  0.46  0.91  0.6441
+uis/uis-standard                                     full 1920-09  1272   0.72  0.24  0.27  0.90  0.8020
+vix-shield/vix-shield-standard                       full 1990-02   439   0.85  0.31  0.35  0.90  0.6273
+kda/kda-smartstack                                   full 1985-02   499   0.99  0.34  0.40  0.85  0.7379
+haa/haa-standard                                     full 1974-03   630   1.50  0.48  0.57  0.84  0.7962
+kda/kda-top6                                         full 1985-02   499   1.00  0.33  0.39  0.84  0.7703
+kda/kda-top4                                         full 1985-02   499   1.02  0.33  0.40  0.84  0.7678
+orthogonal-alpha-btal/orthogonal-alpha-btal-standard full 2003-03   282   1.00  0.38  0.46  0.83  0.6637
+haa/haa-simple-rsst-ucits                            full 1974-03   630   1.24  0.39  0.48  0.81  0.8593
+haa/haa-no-qqq                                       full 1974-03   630   1.57  0.48  0.60  0.81  0.8629
+regime-detector/regime-detector-standard             full 1990-11   430   0.67  0.22  0.27  0.79  0.8184
+regime-detector/regime-detector-smartleverage        full 1990-11   430   0.62  0.20  0.26  0.79  0.8165
+cdm/cdm-standard                                     full 1985-02   499   1.26  0.36  0.46  0.78  0.8806
+vaa/vaa-g4-smartstack                                full 1977-08   589   1.21  0.40  0.52  0.78  0.8818
+vix-shield/vix-shield-leveraged                      full 1990-02   439   0.64  0.20  0.26  0.77  0.8297
+sma-trend/sma-trend-tlt                              full 1990-02   439   0.56  0.18  0.24  0.77  0.8384
+vaa/vaa-g4-smartleverage-1.5x                        full 1977-08   589   1.13  0.37  0.48  0.76  0.9138
+US bonds (VBMFX)                                     full 1987-01   476   1.16  0.33  0.44  0.75  0.9042
+haa/haa-smartstack                                   full 1974-03   630   1.38  0.39  0.54  0.72  0.9648
+vaa/vaa-g4                                           full 1977-08   589   1.25  0.38  0.53  0.72  0.9553
+haa/haa-simple-rsst                                  full 1974-03   630   1.18  0.33  0.48  0.69  0.9776
+Gold (GLD)                                           full 2004-12   261   0.67  0.20  0.32  0.63  0.8990
+predicting-treasury/predicting-treasury-standard     full 1985-02   499   1.20  0.32  0.51  0.62  0.9910
+sma-trend/sma-trend-gld                              full 1990-02   439   0.47  0.11  0.19  0.57  0.9885
+gold-cross-asset/gold-cross-asset-base               full 1985-02   499   0.69  0.09  0.28  0.31  1.0000
+
+--- all series, 2000 window, by multiple ---
+name                                                  win    from    mo Sharpe   SSR shufl  mult       p
+haa/haa-leveraged-3x                                 2000 2000-01   320   0.83  1.02  0.37  2.74  0.0004
+tqqq-tlt-dual-gate/tqqq-tlt-dual-gate-standard       2000 2000-01   320   0.62  0.59  0.27  2.17  0.0047
+tqqq-trend/tqqq-trend-proxy                          2000 2000-01   320   0.86  0.78  0.37  2.12  0.0058
+tqqq-quadrant-stack/tqqq-quadrant-stack-buffered     2000 2000-01   320   0.88  0.80  0.38  2.12  0.0064
+haa/haa-simple-momentum                              2000 2000-01   320   0.79  0.72  0.35  2.08  0.0046
+haa/haa-leveraged                                    2000 2000-01   320   0.97  0.89  0.43  2.07  0.0078
+tqqq-trend/tqqq-trend-standard                       2000 2000-01   320   0.87  0.76  0.37  2.03  0.0063
+dms-triad/dms-triad-plus-plus                        2000 2000-01   320   1.02  0.92  0.45  2.03  0.0080
+dms-lt-gain/dms-lt-gain-plus-plus                    2000 2000-01   320   0.84  0.76  0.38  1.97  0.0106
+inflation-compass/inflation-compass-steady           2000 2000-01   320   1.03  0.87  0.45  1.94  0.0118
+inflation-compass/inflation-compass-fast             2000 2000-01   320   1.00  0.82  0.43  1.90  0.0132
+momentum-correlation-triplet/mom-corr-triplet-standa 2000 2000-01   320   1.14  0.90  0.47  1.90  0.0109
+dms-triad/dms-triad-plus                             2000 2000-01   320   1.11  0.91  0.49  1.86  0.0137
+momentum-correlation-triplet/mom-corr-triplet-smartl 2000 2000-01   320   1.03  0.79  0.43  1.83  0.0159
+haa/haa-smartleverage-1.5x                           2000 2000-01   320   1.01  0.80  0.44  1.81  0.0179
+composite-momentum/composite-momentum-smartstack     2000 2000-01   320   1.14  0.87  0.48  1.80  0.0191
+tqqq-quadrant-stack/tqqq-quadrant-stack-standard     2000 2000-01   320   0.89  0.68  0.38  1.80  0.0195
+dms-lt-gain/dms-lt-gain-plus                         2000 2000-01   320   0.93  0.74  0.42  1.79  0.0206
+sadek-spy-band/sadek-spy-band-standard               2000 2000-01   320   0.78  0.57  0.33  1.74  0.0236
+composite-momentum/composite-momentum-standard       2000 2000-01   320   1.26  0.90  0.52  1.73  0.0252
+haa/haa-standard                                     2000 2000-01   320   1.16  0.87  0.51  1.70  0.0306
+kiss-momentum/kiss-sys1-only                         2000 2000-01   320   1.26  0.90  0.54  1.69  0.0281
+kiss-momentum/kiss-70-30-smartleverage               2000 2000-01   320   1.15  0.81  0.49  1.67  0.0300
+vitral-multi-asset-momentum/vitral-mam-ensemble      2000 2000-01   320   0.99  0.70  0.42  1.66  0.0341
+century-momentum/century-momentum-cash               2000 2000-01   320   0.87  0.64  0.39  1.65  0.0343
+sma-trend/sma-trend-spy-10m                          2000 2000-01   320   0.81  0.56  0.34  1.63  0.0380
+haa/haa-simple-leveraged-qld                         2000 2000-01   320   0.68  0.49  0.30  1.62  0.0347
+laa/laa-standard                                     2000 2000-01   320   1.03  0.69  0.43  1.62  0.0360
+sma-trend/sma-trend-spy                              2000 2000-01   320   0.90  0.60  0.38  1.58  0.0442
+rp3-trend-tilted-core/rp3-trend-tilted-sma10         2000 2000-01   320   1.05  0.72  0.46  1.57  0.0467
+century-momentum/century-momentum-standard           2000 2000-01   320   0.93  0.64  0.41  1.56  0.0490
+haa/haa-leveraged-no-qqq                             2000 2000-01   320   1.00  0.68  0.43  1.55  0.0509
+letf-upro-zroz-gld-kmlm/letf-upro-zroz-gld-kmlm-brak 2000 2000-01   320   0.85  0.58  0.37  1.55  0.0554
+composite-momentum/composite-momentum-aggressive     2000 2000-01   320   1.13  0.73  0.47  1.54  0.0489
+momentum-correlation-triplet/mom-corr-triplet-plus   2000 2000-01   320   1.18  0.77  0.50  1.52  0.0586
+letf-upro-zroz-gld/letf-upro-zroz-gld-brake          2000 2000-01   320   0.82  0.53  0.36  1.49  0.0669
+vix-shield/vix-shield-conservative                   2000 2000-01   320   0.96  0.60  0.40  1.49  0.0631
+papa-bear/papa-bear-standard                         2000 2000-01   320   0.82  0.53  0.36  1.49  0.0657
+dragon-4321/dragon-4321-capital-efficient            2000 2000-01   320   0.99  0.64  0.43  1.49  0.0629
+tqqq-qqq-band/tqqq-qqq-band-vol-scaled-buffer        2000 2000-01   320   0.53  0.34  0.24  1.46  0.0721
+haa/haa-simple-leveraged                             2000 2000-01   320   0.88  0.56  0.38  1.46  0.0714
+dms-bamboo/dms-bamboo                                2000 2000-01   320   1.02  0.63  0.43  1.46  0.0702
+kiss-momentum/kiss-combined-70-30                    2000 2000-01   320   1.33  0.80  0.55  1.46  0.0725
+inflation-compass/inflation-compass-standard         2000 2000-01   320   1.17  0.74  0.51  1.45  0.0778
+haa/haa-simple-leveraged-3x                          2000 2000-01   320   0.80  0.51  0.35  1.45  0.0739
+dms-triad/dms-triad                                  2000 2000-01   320   1.21  0.74  0.51  1.44  0.0806
+desert-portfolio/desert-portfolio-base               2000 2000-01   320   1.12  0.65  0.45  1.44  0.0751
+golden-ratio/golden-ratio-standard                   2000 2000-01   320   1.04  0.62  0.43  1.43  0.0804
+sector-rotation/sector-rotation-top3-no-filter       2000 2000-01   320   0.70  0.43  0.30  1.43  0.0827
+equity-managed-futures/equity-managed-futures-standa 2000 2000-01   320   0.89  0.54  0.38  1.43  0.0863
+Nasdaq 100 (QQQ)                                     2000 2000-01   320   0.48  0.30  0.21  1.43  0.0822
+pragmatic-aa/pragmatic-aa-standard                   2000 2000-01   320   1.10  0.66  0.46  1.42  0.0872
+alphaone-momentum/alphaone-momentum-standard         2000 2000-01   320   0.89  0.56  0.40  1.42  0.0891
+carter-cash-trigger/carter-cash-trigger-spy          2000 2000-01   320   0.92  0.55  0.39  1.41  0.0892
+haa/haa-no-qqq                                       2000 2000-01   320   1.20  0.72  0.51  1.41  0.0871
+tqqq-qqq-band/tqqq-qqq-band-standard                 2000 2000-01   320   0.56  0.34  0.25  1.39  0.1020
+aca-dynamic-bond/aca-dynamic-bond-stocks-sleeve      2000 2000-01   320   0.68  0.41  0.30  1.38  0.1009
+haa/haa-nlx-60-40                                    2000 2000-01   320   1.05  0.63  0.45  1.38  0.1014
+gtaa/gtaa-agg3                                       2000 2000-01   320   0.84  0.51  0.37  1.38  0.1034
+haa/haa-simple-rsst                                  2000 2000-01   320   0.87  0.53  0.39  1.37  0.1036
+haa/haa-simple                                       2000 2000-01   320   1.09  0.63  0.46  1.37  0.1061
+buy-the-dip/buy-the-dip-standard                     2000 2000-01   320   1.31  0.91  0.67  1.36  0.1076
+haa/haa-simple-rsst-ucits                            2000 2000-01   320   0.96  0.57  0.42  1.36  0.1083
+schwoerer-rpm/schwoerer-rpm-3asset                   2000 2000-01   320   1.00  0.61  0.45  1.36  0.1097
+letf-sso-zroz-gld/letf-sso-zroz-gld-brake            2000 2000-01   320   0.92  0.54  0.40  1.36  0.1127
+gpm/gpm-standard                                     2000 2000-01   320   1.03  0.60  0.45  1.33  0.1182
+vitral-multi-asset-momentum/vitral-mam-low-protectio 2000 2000-01   320   1.12  0.65  0.49  1.33  0.1256
+dms-gpmv/dms-gpmv                                    2000 2000-01   320   1.12  0.63  0.47  1.33  0.1224
+growth-inflation-sector-timing/growth-inflation-conc 2000 2000-01   320   0.81  0.47  0.36  1.32  0.1312
+dragon-4321/dragon-4321-leveraged                    2000 2000-01   320   0.84  0.47  0.36  1.30  0.1398
+carter-12pct/carter-12pct-base                       2000 2000-01   320   0.83  0.46  0.36  1.30  0.1392
+eaa/eaa-golden-defensive                             2000 2000-01   320   0.89  0.49  0.38  1.29  0.1404
+golden-butterfly/golden-butterfly-base               2000 2000-01   320   1.00  0.53  0.41  1.29  0.1362
+no-brainer-bernstein/no-brainer-base                 2000 2000-01   320   0.63  0.35  0.27  1.29  0.1450
+haa/haa-quartet                                      2000 2000-01   320   1.02  0.58  0.45  1.29  0.1424
+return-stacked-quartet/return-stacked-quartet-20-20- 2000 2000-01   320   0.87  0.48  0.37  1.28  0.1438
+sector-rotation/sector-rotation-top3                 2000 2000-01   320   0.64  0.36  0.28  1.28  0.1463
+adaptive-6040/adaptive-6040-standard                 2000 2000-01   320   0.95  0.50  0.39  1.28  0.1508
+dms-bamboo/dms-bamboo-plus                           2000 2000-01   320   0.78  0.43  0.34  1.27  0.1444
+global-market-benchmark/global-market-60-40          2000 2000-01   320   0.53  0.30  0.23  1.27  0.1553
+growth-trend-timing/growth-trend-timing-standard     2000 2000-01   320   0.98  0.53  0.42  1.26  0.1552
+dms-bamboo/dms-bamboo-plus-plus                      2000 2000-01   320   0.61  0.34  0.27  1.25  0.1584
+dragon-4321/dragon-4321-standard                     2000 2000-01   320   1.07  0.56  0.45  1.25  0.1642
+regime-detector/regime-detector-smartlev-brake       2000 2000-01   320   0.57  0.32  0.26  1.24  0.1850
+bogleheads-3-fund/bogleheads-3-fund-aggressive       2000 2000-01   320   0.63  0.34  0.27  1.24  0.1772
+diversified-dm/diversified-dm-standard               2000 2000-01   320   0.81  0.42  0.35  1.22  0.1821
+core-four-ferri/core-four-ferri-80-20                2000 2000-01   320   0.63  0.33  0.27  1.22  0.1866
+adm/adm-smartleverage-1.5x                           2000 2000-01   320   0.89  0.47  0.39  1.22  0.1884
+bogleheads-3-fund/bogleheads-3-fund-moderate         2000 2000-01   320   0.70  0.37  0.30  1.21  0.1891
+swensen-yale/swensen-yale-base                       2000 2000-01   320   0.70  0.36  0.30  1.21  0.1864
+rpea/rpea-conservative                               2000 2000-01   320   0.91  0.47  0.39  1.21  0.1972
+kiss-momentum/kiss-combined-50-50                    2000 2000-01   320   1.27  0.64  0.53  1.21  0.1983
+cockroach-portfolio/cockroach-base                   2000 2000-01   320   0.99  0.49  0.41  1.20  0.2012
+voltarget-qqq/voltarget-qqq-conservative             2000 2000-01   320   0.77  0.40  0.33  1.19  0.2041
+us-market-benchmark/us-market-100                    2000 2000-01   320   0.60  0.31  0.26  1.19  0.2095
+haa/haa-smartstack                                   2000 2000-01   320   1.05  0.56  0.47  1.19  0.2088
+simple-path-wealth/simple-path-100                   2000 2000-01   320   0.60  0.31  0.26  1.19  0.2125
+adm/adm-standard                                     2000 2000-01   320   0.96  0.50  0.42  1.19  0.2104
+rp3-trend-tilted-core/rp3-trend-tilted-standard      2000 2000-01   320   1.08  0.56  0.48  1.19  0.2149
+simple-path-wealth/simple-path-75-25                 2000 2000-01   320   0.69  0.35  0.29  1.19  0.2141
+dms-global-navigator/dms-global-navigator-plus       2000 2000-01   320   1.03  0.54  0.46  1.18  0.2153
+permanent-portfolio-gave/permanent-portfolio-gave-st 2000 2000-01   320   1.01  0.49  0.42  1.18  0.2182
+growth-inflation-sector-timing/growth-inflation-dive 2000 2000-01   320   0.71  0.36  0.31  1.18  0.2249
+vitral-multi-asset-momentum/vitral-mam-standard      2000 2000-01   320   1.12  0.57  0.48  1.17  0.2235
+daa/daa-g12-smartstack                               2000 2000-01   320   1.03  0.54  0.46  1.17  0.2284
+voltarget-qqq/voltarget-qqq-balanced                 2000 2000-01   320   0.69  0.35  0.30  1.17  0.2189
+adm/adm-smartstack                                   2000 2000-01   320   0.99  0.52  0.44  1.17  0.2299
+rpea/rpea-adaptive                                   2000 2000-01   320   0.90  0.47  0.40  1.17  0.2308
+sma-trend/sma-trend-qqq                              2000 2000-01   320   0.75  0.38  0.32  1.17  0.2258
+aca-dynamic-bond/aca-dynamic-bond-standard           2000 2000-01   320   0.98  0.48  0.41  1.17  0.2240
+letf-upro-zroz-gld-kmlm/letf-upro-zroz-gld-kmlm-base 2000 2000-01   320   0.69  0.35  0.30  1.16  0.2291
+defense-first/defense-first-standard                 2000 2000-01   320   1.07  0.53  0.46  1.15  0.2383
+coffeehouse/coffeehouse-base                         2000 2000-01   320   0.72  0.35  0.31  1.15  0.2332
+voltarget-qqq/voltarget-qqq-aggressive               2000 2000-01   320   0.66  0.33  0.29  1.15  0.2524
+letf-sso-zroz-gld/letf-sso-zroz-gld-base             2000 2000-01   320   0.73  0.36  0.31  1.14  0.2510
+classic-60-40/classic-60-40-base                     2000 2000-01   320   0.76  0.37  0.32  1.14  0.2556
+sector-rotation/sector-rotation-top5                 2000 2000-01   320   0.77  0.38  0.33  1.14  0.2597
+eaa/eaa-golden-offensive                             2000 2000-01   320   0.85  0.42  0.37  1.14  0.2531
+letf-upro-zroz-gld/letf-upro-zroz-gld-base           2000 2000-01   320   0.63  0.31  0.27  1.13  0.2584
+S&P 500 (VFINX)                                      2000 2000-01   320   0.60  0.29  0.26  1.13  0.2670
+60/40 (VFINX/VBMFX)                                  2000 2000-01   320   0.74  0.35  0.31  1.13  0.2597
+permanent-portfolio-static/permanent-portfolio-stati 2000 2000-01   320   1.02  0.49  0.43  1.13  0.2736
+adaptive-aa/adaptive-aa-10asset                      2000 2000-01   320   0.95  0.45  0.40  1.12  0.2724
+vix-shield/vix-shield-standard                       2000 2000-01   320   0.74  0.36  0.32  1.12  0.2713
+baa/baa-g4                                           2000 2000-01   320   0.96  0.45  0.41  1.11  0.2837
+paired-switching/paired-switching-spy-tlt            2000 2000-01   320   0.74  0.36  0.33  1.10  0.2971
+permanent-portfolio-nlx/permanent-portfolio-nlx-stan 2000 2000-01   320   0.96  0.45  0.41  1.10  0.2939
+all-weather-dalio/all-weather-dalio-base             2000 2000-01   320   0.92  0.42  0.38  1.10  0.2994
+regime-detector/regime-detector-standard             2000 2000-01   320   0.49  0.24  0.22  1.10  0.3054
+gem/gem-standard                                     2000 2000-01   320   0.82  0.38  0.35  1.09  0.3079
+regime-detector/regime-detector-smartleverage        2000 2000-01   320   0.46  0.22  0.21  1.09  0.3125
+predicting-treasury/predicting-treasury-standard     2000 2000-01   320   0.89  0.44  0.40  1.09  0.3124
+trinity/trinity-standard                             2000 2000-01   320   1.00  0.46  0.42  1.09  0.3155
+uis/uis-standard                                     2000 2000-01   320   0.93  0.43  0.40  1.08  0.3159
+dms-russell/dms-russell                              2000 2000-01   320   1.13  0.52  0.49  1.07  0.3373
+vix-shield/vix-shield-leveraged                      2000 2000-01   320   0.56  0.26  0.25  1.07  0.3412
+permanent-portfolio/permanent-portfolio-static       2000 2000-01   320   1.00  0.45  0.42  1.06  0.3450
+sma-trend/sma-trend-vnq                              2000 2000-01   320   0.54  0.26  0.25  1.05  0.3576
+daa/daa-g12                                          2000 2000-01   320   1.07  0.48  0.46  1.04  0.3641
+paa/paa-dynamic-protection                           2000 2000-01   320   1.13  0.51  0.49  1.04  0.3745
+mama-bear/mama-bear-standard                         2000 2000-01   320   0.96  0.43  0.41  1.04  0.3761
+Long Treasuries (VUSTX)                              2000 2000-01   320   0.42  0.19  0.18  1.01  0.4154
+baa/baa-g12                                          2000 2000-01   320   1.18  0.51  0.51  1.00  0.4095
+permanent-portfolio/permanent-portfolio-tactical     2000 2000-01   320   1.15  0.49  0.50  0.99  0.4313
+permanent-portfolio-nlx/permanent-portfolio-nlx-2024 2000 2000-01   320   1.04  0.44  0.44  0.99  0.4394
+faber-12m-high/faber-12m-high-dynamic-bond           2000 2000-01   320   1.16  0.49  0.50  0.98  0.4440
+gtaa/gtaa-5                                          2000 2000-01   320   1.03  0.41  0.42  0.96  0.4683
+dynamic-macro-allocation-sadek/dynamic-macro-allocat 2000 2000-01   320   1.16  0.47  0.50  0.95  0.4956
+schwoerer-rp-gold-scv/schwoerer-rp-gold-scv-vbr      2000 2000-01   320   1.01  0.43  0.46  0.94  0.5033
+schwoerer-rp-gold-scv/schwoerer-rp-gold-scv-standard 2000 2000-01   320   0.85  0.35  0.37  0.93  0.5164
+faber-12m-high/faber-12m-high-standard               2000 2000-01   320   1.11  0.44  0.47  0.93  0.5284
+aca-dynamic-bond/aca-dynamic-bond-reit-sleeve        2000 2000-01   320   0.72  0.28  0.31  0.90  0.5690
+tactical-permanent/tactical-permanent-standard       2000 2000-01   320   1.14  0.44  0.49  0.90  0.5767
+split-momentum-pair/split-momentum-pair-standard     2000 2000-01   320   0.75  0.30  0.33  0.89  0.5798
+paa/paa-high                                         2000 2000-01   320   1.11  0.43  0.48  0.89  0.5914
+ivy/ivy-timing                                       2000 2000-01   320   1.03  0.37  0.42  0.88  0.6017
+robust-aa/robust-aa-aggressive                       2000 2000-01   320   0.93  0.34  0.39  0.87  0.6335
+sma-trend/sma-trend-tlt                              2000 2000-01   320   0.38  0.14  0.17  0.87  0.6018
+vaa/vaa-g4-smartstack                                2000 2000-01   320   0.93  0.37  0.43  0.86  0.6321
+schwoerer-rp-gold-scv/schwoerer-rp-gold-scv-no-filte 2000 2000-01   320   1.05  0.39  0.45  0.86  0.6451
+kda/kda-top6                                         2000 2000-01   320   0.75  0.28  0.33  0.85  0.6625
+kda/kda-smartstack                                   2000 2000-01   320   0.79  0.29  0.35  0.83  0.6772
+aca-dynamic-bond/aca-dynamic-bond-gold-sleeve        2000 2000-01   320   0.67  0.25  0.30  0.83  0.6745
+robust-aa/robust-aa-balanced                         2000 2000-01   320   0.88  0.30  0.37  0.81  0.7276
+cdm/cdm-standard                                     2000 2000-01   320   0.99  0.32  0.41  0.78  0.7773
+US bonds (VBMFX)                                     2000 2000-01   320   0.89  0.30  0.38  0.78  0.7718
+kda/kda-top4                                         2000 2000-01   320   0.85  0.29  0.37  0.77  0.7988
+vaa/vaa-g4-smartleverage-1.5x                        2000 2000-01   320   0.84  0.29  0.39  0.75  0.8026
+vaa/vaa-g4                                           2000 2000-01   320   0.93  0.30  0.42  0.72  0.8597
+gold-cross-asset/gold-cross-asset-base               2000 2000-01   320   0.71  0.20  0.32  0.61  0.9567
+sma-trend/sma-trend-gld                              2000 2000-01   320   0.64  0.13  0.28  0.47  0.9965
+
+2000 window: 166 variants, median multiple 1.24, Spearman with full-history multiple 0.59, p<0.05: 32

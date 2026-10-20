@@ -1,0 +1,181 @@
+{
+ "n": 173,
+ "spearman_ssr_main_vs_excess": 0.7141677593707688,
+ "spearman_sharpe_main_vs_excess": 0.7290030025928473,
+ "pearson_ssr": 0.7564239550741438,
+ "median_ratio_excess_over_main": 0.7470711925503155,
+ "flags_main05_vs_excess0.37": {
+  "both_low": 103,
+  "main_low_only": 15,
+  "excess_low_only": 19,
+  "both_high": 36,
+  "agree_share": 0.8034682080924855
+ },
+ "flags_main05_vs_excess0.5": {
+  "both_low": 114,
+  "main_low_only": 4,
+  "excess_low_only": 42,
+  "both_high": 13,
+  "agree_share": 0.7341040462427746
+ },
+ "top12_overlap": 5,
+ "bottom12_overlap": 9,
+ "top43_overlap": 24,
+ "bottom43_overlap": 32,
+ "rank_move_median": 19.0,
+ "rank_move_max": 140,
+ "rank_move_ge_40": 37,
+ "median_ratio_start_before_1990": [
+  0.7167058622936737,
+  148
+ ],
+ "median_rank_change_start_before_1990": -1.0,
+ "median_ratio_start_1990_on": [
+  0.798491117060112,
+  25
+ ],
+ "median_rank_change_start_1990_on": 9.0,
+ "median_ratio_start_2000_on": [
+  0.9492045771699693,
+  7
+ ],
+ "median_rank_change_start_2000_on": 31.0,
+ "median_ratio_taa": 0.7315596958867863,
+ "median_ratio_static": 0.7522510231923601,
+ "largest_rise": [
+  [
+   "diversified-dm/diversified-dm-standard",
+   "1987-11",
+   130,
+   30,
+   0.368,
+   0.4051
+  ],
+  [
+   "haa/haa-smartstack",
+   "1974-03",
+   118,
+   34,
+   0.3883,
+   0.3971
+  ],
+  [
+   "haa/haa-simple-rsst-ucits",
+   "1974-03",
+   117,
+   36,
+   0.3884,
+   0.3948
+  ],
+  [
+   "haa/haa-simple-rsst",
+   "1974-03",
+   147,
+   75,
+   0.3315,
+   0.3327
+  ],
+  [
+   "rvol-shifter/rvol-shifter-3-state",
+   "2000-02",
+   106,
+   39,
+   0.4075,
+   0.3917
+  ],
+  [
+   "rvol-shifter/rvol-shifter-2-state",
+   "2000-02",
+   134,
+   71,
+   0.3583,
+   0.3401
+  ],
+  [
+   "haa/haa-no-qqq",
+   "1974-03",
+   69,
+   8,
+   0.4814,
+   0.5709
+  ],
+  [
+   "haa/haa-standard",
+   "1974-03",
+   66,
+   9,
+   0.4824,
+   0.5613
+  ]
+ ],
+ "largest_fall": [
+  [
+   "rp3-trend-tilted-core/rp3-trend-tilted-sma10",
+   "1972-02",
+   23,
+   163,
+   0.5843,
+   0.1955
+  ],
+  [
+   "rp3-trend-tilted-core/rp3-trend-tilted-standard",
+   "1972-02",
+   27,
+   156,
+   0.5712,
+   0.2082
+  ],
+  [
+   "permanent-portfolio/permanent-portfolio-static",
+   "1960-02",
+   58,
+   162,
+   0.4954,
+   0.1964
+  ],
+  [
+   "all-weather-dalio/all-weather-dalio-base",
+   "1972-01",
+   49,
+   152,
+   0.5112,
+   0.2257
+  ],
+  [
+   "tactical-permanent/tactical-permanent-standard",
+   "1960-02",
+   63,
+   161,
+   0.4872,
+   0.197
+  ],
+  [
+   "kiss-momentum/kiss-sys1-only",
+   "1985-02",
+   24,
+   117,
+   0.5802,
+   0.2813
+  ],
+  [
+   "faber-12m-high/faber-12m-high-dynamic-bond",
+   "1985-02",
+   29,
+   116,
+   0.5648,
+   0.2857
+  ],
+  [
+   "permanent-portfolio/permanent-portfolio-tactical",
+   "1960-02",
+   52,
+   131,
+   0.5092,
+   0.2601
+  ]
+ ],
+ "perm_multiple_col": "multiple",
+ "perm_n": 173,
+ "spearman_multiple_main_vs_excess": 0.6007782840667313,
+ "multiple_above1_both": 98
+}
